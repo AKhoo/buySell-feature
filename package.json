@@ -1,6 +1,6 @@
 {
   "name": "buy-sell",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "",
   "author": "Chris Caden",
   "license": "",
@@ -12,21 +12,20 @@
     "server-dev": "nodemon server/index.js"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.24.1",
-    "webpack": "^4.28.1"
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "nodemon": "^1.18.9",
-    "express": "^4.16.4",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "mongoose": "^4.9.6",
-    "jquery": "^3.1.1",
+    "axios": "^0.18.0",
     "body-parser": "^1.17.0",
-    "axios": "^0.18.0"
+    "express": "^4.15.0",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.9.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "request": "^2.81.0"
   }
 }

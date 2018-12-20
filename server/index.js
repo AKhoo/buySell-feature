@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const port = 3000;
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
