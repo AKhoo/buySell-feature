@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = require('./index.js');
+const db = mongoose.connection;
 
 // get current date and time string
 function getDateAndTime(){

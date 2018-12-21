@@ -2,10 +2,19 @@ const mongoose = require('mongoose');
 const Transaction = require('./Transaction.js');
 const Stock = require('./Stock.js');
 
-mongoose.connect('mongodb://localhost/robinsHood_buySell');
+// connect to mongo via localhost
+var promise = mongoose.connect('mongodb://localhost/robinsHood', {
+  useMongoClient: true
+});
+
+// define connection
 const db = mongoose.connection;
+
+// if there's a connection error log it
 db.on('error', console.error.bind(console, 'connection error:'));
 
+// RUN THIS CODE TO SEED MONGO DATABASE
+// mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 
 
 var Schema = mongoose.Schema;

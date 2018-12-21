@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 const Schema = require('./index.js');
+const db = mongoose.connection;
 
-// RUN THIS CODE TO SEED MONGO DATABASE
-// mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 
 let stockSchema = new mongoose.Schema ({
   stockTicker: {
@@ -29,12 +29,15 @@ let stockSchema = new mongoose.Schema ({
 // methods
 
 let getStock = (ticker, cb) => {
-    stocks.findOne({stockTicker: ticker}).then((stock) => {
+  Stock.findOne(
+    {stockTicker: ticker}).then((stock) => {
+      console.log('STOCK', stock)
       cb(null, stock)
-    })
+  })
 };
 
 // define Transaction model
 var Stock = mongoose.model('Stock', stockSchema);
 
 module.exports = Stock
+module.exports.getStock = getStock
