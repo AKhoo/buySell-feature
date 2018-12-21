@@ -1,4 +1,4 @@
-Symbol,Name,LastSale,MarketCap,Sector
+stockTicker,stockName,currentPrice,marketCap,sector
 PIH,"1347 Property Insurance Holdings, Inc.",6.8,40696408.8,Finance
 TURN,180 Degree Capital Corp.,1.88,58508536.56,Finance
 FLWS,"1-800 FLOWERS.COM, Inc.",10.35,668863181.7,Consumer Services
