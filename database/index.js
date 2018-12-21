@@ -19,7 +19,7 @@ let transactionSchema = mongoose.Schema({
     required: [true, 'timeInForce field is required']
   },
   date: {
-    type: Date,
+    type: String,
     required: [true, 'date field is required']
   },
   status: {
@@ -31,7 +31,7 @@ let transactionSchema = mongoose.Schema({
     required: [true, 'quantity field is required']
   },
   filled: {
-    type: Date
+    type: String
   },
   filledQuantity: {
     type: String
@@ -55,7 +55,7 @@ let stockSchema = mongoose.Schema({
     required: [true, 'currentPrice field is required']
   },
   date: {
-    type: Date,
+    type: String,
     required: [true, 'date field is required']
   }
 });
@@ -70,5 +70,5 @@ let save = () => {
 };
 
 
-
+// mongoimport --db robinsHood --collection stocks --file stock_data.json --jsonArray
 module.exports.save = save;

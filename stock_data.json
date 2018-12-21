@@ -1,0 +1,26 @@
+[
+  {
+    "stockName": "Facebook",
+    "stockTicker": "FB",
+    "currentPrice": 132.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Google",
+    "stockTicker": "GOOGL",
+    "currentPrice": 1023.58,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "GoPro",
+    "stockTicker": "GPRO",
+    "currentPrice": 4.28,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "American Express",
+    "stockTicker": "AXP",
+    "currentPrice": 95.77,
+    "date": "2018-12-20 17:19:21"
+  }
+]
