@@ -22,13 +22,11 @@ app.get('/:stockTicker', (req, res) => {
 
 app.post('/', (req, res) => {
     
-    console.log('PARAMMMMSSSSSS', req.method, req.path, req.body, req.params.stockTicker);
-
     var transaction = {
-        stockName: 'Facebook',
-        stockTicker: 'FB',
-        currentPrice: 123.45,
-        quantity: 10
+        stockName: req.body.stockName,
+        stockTicker: req.body.stockTicker,
+        currentPrice: req.body.currentPrice,
+        quantity: req.body.quantity
     }
 
     transactions.newTransaction(transaction, (err, data) => {
