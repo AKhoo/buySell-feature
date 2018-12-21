@@ -9,7 +9,7 @@ let transactionSchema = mongoose.Schema({
   stockTicker: {
     type: String,
     required: [true, 'stockTicker field is required']
-  }
+  },
   orderType: {
     type: String,
     required: [true, 'orderType field is required']
@@ -61,6 +61,7 @@ let stockSchema = mongoose.Schema({
 });
 
 let Transaction = mongoose.model('Transaction', transactionSchema);
+let Stock = mongoose.model('Stock', stockSchema);
 
 
 
