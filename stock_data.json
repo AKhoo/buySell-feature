@@ -22,5 +22,665 @@
     "stockTicker": "AXP",
     "currentPrice": 95.77,
     "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Ford",
+    "stockTicker": "F",
+    "currentPrice": 8.26,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Microsoft",
+    "stockTicker": "MSFT",
+    "currentPrice": 101.51,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Amazon",
+    "stockTicker": "AMZN",
+    "currentPrice": 1460.83,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Advanced Micro Devices",
+    "stockTicker": "AMD",
+    "currentPrice": 17.94,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Micron Technology",
+    "stockTicker": "MU",
+    "currentPrice": 31.28,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Cisco",
+    "stockTicker": "CSCO",
+    "currentPrice": 42.49,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Intel",
+    "stockTicker": "INTC",
+    "currentPrice": 45.54,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Sirius XM",
+    "stockTicker": "SIRI",
+    "currentPrice": 5.89,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Qualcomm",
+    "stockTicker": "QCOM",
+    "currentPrice": 56.37,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Ebay",
+    "stockTicker": "EBAY",
+    "currentPrice": 27.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "Starbucks",
+    "stockTicker": "SBUX",
+    "currentPrice": 62.15,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
+  },
+  {
+    "stockName": "COMPANY",
+    "stockTicker": "CMPY",
+    "currentPrice": 99.99,
+    "date": "2018-12-20 17:19:21"
   }
 ]
