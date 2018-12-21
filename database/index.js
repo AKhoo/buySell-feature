@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/robinsHood');
+mongoose.connect('mongodb://localhost/robinsHood_buySell');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
 
 let transactionSchema = mongoose.Schema({
   stockName: {
@@ -74,6 +76,12 @@ function getDateAndTime(){
   return dateStr + ' ' + time;
 }
 
+let getStock = (ticker, cb) => {
+  stocks.findOne({stockTicker: ticker}).then((stock) => {
+    cb(null, stock)
+  })
+};
+
 let save = (transaction, cb) => {
   var newTransaction = {
     stockName: transaction.stockName,
@@ -98,6 +106,8 @@ let save = (transaction, cb) => {
   })
 };
 
+
 // RUN THIS CODE TO SEED MONGO DATABASE
 // mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 module.exports.save = save;
+module.exports.getStock = getStock;
