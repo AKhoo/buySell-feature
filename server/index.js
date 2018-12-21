@@ -20,24 +20,24 @@ app.get('/:stockTicker', (req, res) => {
     });
 });
 
-// app.post('api/transactions', (req, res) => {
+app.post('/', (req, res) => {
     
-//     console.log('PARAMMMMSSSSSS', req.method, req.path, req.body, req.params.stockTicker);
+    console.log('PARAMMMMSSSSSS', req.method, req.path, req.body, req.params.stockTicker);
 
-//     var transaction = {
-//         stockName: 'Facebook',
-//         stockTicker: 'FB',
-//         currentPrice: 123.45,
-//         quantity: 10
-//     }
+    var transaction = {
+        stockName: 'Facebook',
+        stockTicker: 'FB',
+        currentPrice: 123.45,
+        quantity: 10
+    }
 
-//     transactions.newTransaction(transaction, (err, data) => {
-//         if (err) {
-//             res.json({message: 'ooo, guess you missed that trade... hope it wasn\'t important!'});
-//         } else {
-//             res.json(data)
-//         }
-//     });
-// });
+    transactions.newTransaction(transaction, (err, data) => {
+        if (err) {
+            res.json({message: 'ooo, guess you missed that trade... hope it wasn\'t important!'});
+        } else {
+            res.json(data)
+        }
+    });
+});
 
 app.listen(port, () => { console.log('Listening on ' + port + '!!!'); });

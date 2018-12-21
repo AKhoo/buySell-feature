@@ -74,14 +74,10 @@ let transactionSchema = new mongoose.Schema({
       filledQuantity: 0,
       totalCost: 0.00
     }
-    Transaction.update({'stockName':newTransaction.stockName},
-    {'stockTicker':newTransaction.stockTicker}, {'currentPrice':newTransaction.currentPrice},
-    {'orderType':newTransaction.orderType}, {'timeInForce':newTransaction.timeInForce},
-    {'date':newTransaction.date}, {'quantity':newTransaction.quantity},
-    {$set:{status:newTransaction.status}}, {$set:{filled:newTransaction.filled}},
-    {$set:{filledQuantity:newTransaction.filledQuantity}}, {$set:{totalCost:newTransaction.totalCost}},
-    {upsert:true}).then((user) => {
-      cb(null, user);
+    console.log(newTransaction);
+    Transaction.update({'stockTicker': transaction.stockTicker}, newTransaction,
+      {upsert: true}).then((tx) => {
+        cb(null, tx);
     })
   };
 
@@ -90,3 +86,4 @@ let transactionSchema = new mongoose.Schema({
 
   // export
   module.exports = Transaction;
+  module.exports.newTransaction = newTransaction;
