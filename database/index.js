@@ -2,13 +2,38 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/robinsHood');
 
 let transactionSchema = mongoose.Schema({
-  username: {
+  stockName: {
     type: String,
-    required: [true, 'Name field is required']
+    required: [true, 'stockName field is required']
   },
-  repos: {
-    type: Array,
-    required: [true, 'Repos are required']
+  orderType: {
+    type: String,
+    required: [true, 'orderType field is required']
+  },
+  timeInForce: {
+    type: String,
+    required: [true, 'timeInForce field is required']
+  },
+  date: {
+    type: Date,
+    required: [true, 'date field is required']
+  },
+  status: {
+    type: String,
+    required: [true, 'status field is required']
+  },
+  quantity: {
+    type: Number,
+    required: [true, 'quantity field is required']
+  },
+  filled: {
+    type: Date
+  },
+  filledQuantity: {
+    type: String
+  },
+  totalCost: {
+    type: Number
   }
 });
 
