@@ -6,6 +6,10 @@ let transactionSchema = mongoose.Schema({
     type: String,
     required: [true, 'stockName field is required']
   },
+  stockTicker: {
+    type: String,
+    required: [true, 'stockTicker field is required']
+  }
   orderType: {
     type: String,
     required: [true, 'orderType field is required']
@@ -34,6 +38,25 @@ let transactionSchema = mongoose.Schema({
   },
   totalCost: {
     type: Number
+  }
+});
+
+let stockSchema = mongoose.Schema({
+  stockName: {
+    type: String,
+    required: [true, 'stockName field is required']
+  },
+  stockTicker: {
+    type: String,
+    required: [true, 'stockTicker field is required']
+  },
+  currentPrice: {
+    type: Number,
+    required: [true, 'currentPrice field is required']
+  },
+  date: {
+    type: Date,
+    required: [true, 'date field is required']
   }
 });
 
