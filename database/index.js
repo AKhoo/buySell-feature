@@ -70,5 +70,5 @@ let save = () => {
 };
 
 
-// mongoimport --db robinsHood --collection stocks --file stock_data.json --jsonArray
+// mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 module.exports.save = save;
