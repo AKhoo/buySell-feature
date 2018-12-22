@@ -31,7 +31,6 @@ let stockSchema = new mongoose.Schema ({
 let getStock = (ticker, cb) => {
   Stock.findOne(
     {stockTicker: ticker}).then((stock) => {
-      console.log('STOCK', stock)
       cb(null, stock)
   })
 };

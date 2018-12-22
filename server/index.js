@@ -9,7 +9,7 @@ const port = 3333;
 // app.use(express.static('public'));
 app.use(bodyParser.json());
 
-app.get('/:stockTicker', (req, res) => {
+app.get('/stocks/:stockTicker', (req, res) => {
     console.log('PARAMMMMSSSSSS', req.params);
     stocks.getStock(req.params.stockTicker, (err, data) => {
         if (err) {
@@ -20,7 +20,7 @@ app.get('/:stockTicker', (req, res) => {
     });
 });
 
-app.post('/', (req, res) => {
+app.post('/transactions', (req, res) => {
     
     var transaction = {
         stockName: req.body.stockName,
