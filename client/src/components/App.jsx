@@ -1,17 +1,17 @@
 import React from 'react';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
     }
+  }
 
-    render() {
-        return (
-            <div>I AM NOW RENDERED</div>
-        )
-    }
+  render() {
+    return (
+      <div>I AM NOW RENDERED</div>
+    )
+  }
 };
 
 export default App;

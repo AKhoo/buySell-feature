@@ -10,32 +10,31 @@ const port = 3333;
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {
-    console.log('PARAMMMMSSSSSS', req.params);
-    stocks.getStock(req.params.stockTicker, (err, data) => {
-        if (err) {
-            res.json({message: 'what\'s a stock?'});
-        } else {
-            res.json(data)
-        }
-    });
+  console.log('PARAMMMMSSSSSS', req.params);
+  stocks.getStock(req.params.stockTicker, (err, data) => {
+    if (err) {
+      res.json({ message: 'what\'s a stock?' });
+    } else {
+      res.json(data);
+    }
+  });
 });
 
 app.post('/transactions', (req, res) => {
-    
-    var transaction = {
-        stockName: req.body.stockName,
-        stockTicker: req.body.stockTicker,
-        currentPrice: req.body.currentPrice,
-        quantity: req.body.quantity
-    }
+  const transaction = {
+    stockName: req.body.stockName,
+    stockTicker: req.body.stockTicker,
+    currentPrice: req.body.currentPrice,
+    quantity: req.body.quantity,
+  };
 
-    transactions.newTransaction(transaction, (err, data) => {
-        if (err) {
-            res.json({message: 'ooo, guess you missed that trade... hope it wasn\'t important!'});
-        } else {
-            res.json(data)
-        }
-    });
+  transactions.newTransaction(transaction, (err, data) => {
+    if (err) {
+      res.json({ message: 'ooo, guess you missed that trade... hope it wasn\'t important!' });
+    } else {
+      res.json(data);
+    }
+  });
 });
 
-app.listen(port, () => { console.log('Listening on ' + port + '!!!'); });
+app.listen(port, () => { console.log(`Listening on ${port} !!!`); });
