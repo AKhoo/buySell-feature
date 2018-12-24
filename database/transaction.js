@@ -18,35 +18,35 @@ function getDateAndTime() {
 const transactionSchema = new mongoose.Schema({
   stockName: {
     type: String,
-    required: [true, 'stockName field is required']
+    required: [true, 'stockName field is required'],
   },
   stockTicker: {
     type: String,
-    required: [true, 'stockTicker field is required']
+    required: [true, 'stockTicker field is required'],
   },
   currentPrice: {
     type: Number,
-    required: [true, 'currentPrice field is required']
+    required: [true, 'currentPrice field is required'],
   },
   orderType: {
     type: String,
-    required: [true, 'orderType field is required']
+    required: [true, 'orderType field is required'],
   },
   timeInForce: {
     type: String,
-    required: [true, 'timeInForce field is required']
+    required: [true, 'timeInForce field is required'],
   },
   date: {
     type: String,
-    required: [true, 'date field is required']
+    required: [true, 'date field is required'],
   },
   quantity: {
     type: Number,
-    required: [true, 'quantity field is required']
+    required: [true, 'quantity field is required'],
   },
   status: {
     type: String,
-    required: [true, 'status field is required']
+    required: [true, 'status field is required'],
   },
   filled: {
     type: String,

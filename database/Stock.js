@@ -4,18 +4,18 @@ const Schema = require('./index.js');
 const db = mongoose.connection;
 
 
-const stockSchema = new mongoose.Schema ({
+const stockSchema = new mongoose.Schema({
   stockTicker: {
     type: String,
-    required: [true, 'stockTicker field is required']
+    required: [true, 'stockTicker field is required'],
   },
   stockName: {
     type: String,
-    required: [true, 'stockName field is required']
+    required: [true, 'stockName field is required'],
   },
   currentPrice: {
     type: Number,
-    required: [true, 'currentPrice field is required']
+    required: [true, 'currentPrice field is required'],
   },
   marketCap: {
     type: Number,

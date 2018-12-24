@@ -17,6 +17,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 // mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose.Schema;
 
 module.exports = Schema;
