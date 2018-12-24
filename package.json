@@ -37,6 +37,7 @@
     "mongoose": "^4.9.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "styled-components": "^4.1.3"
   }
 }
