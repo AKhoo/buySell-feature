@@ -3,8 +3,8 @@ const Transaction = require('./Transaction.js');
 const Stock = require('./Stock.js');
 
 // connect to mongo via localhost
-var promise = mongoose.connect('mongodb://localhost/robinsHood', {
-  useMongoClient: true
+const connection = mongoose.connect('mongodb://localhost/robinsHood', {
+  useMongoClient: true,
 });
 
 // define connection
@@ -17,6 +17,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 // mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 
 
-var Schema = mongoose.Schema;
+const { Schema } = mongoose.Schema;
 
 module.exports = Schema;

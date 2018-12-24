@@ -4,40 +4,38 @@ const Schema = require('./index.js');
 const db = mongoose.connection;
 
 
-let stockSchema = new mongoose.Schema ({
+const stockSchema = new mongoose.Schema({
   stockTicker: {
     type: String,
-    required: [true, 'stockTicker field is required']
+    required: [true, 'stockTicker field is required'],
   },
   stockName: {
     type: String,
-    required: [true, 'stockName field is required']
+    required: [true, 'stockName field is required'],
   },
   currentPrice: {
     type: Number,
-    required: [true, 'currentPrice field is required']
+    required: [true, 'currentPrice field is required'],
   },
   marketCap: {
     type: Number,
   },
   sector: {
     type: String,
-  }
+  },
 });
 
+// define Transaction model
+const Stock = mongoose.model('Stock', stockSchema);
 
 // methods
-
-let getStock = (ticker, cb) => {
+const getStock = (ticker, cb) => {
   Stock.findOne(
-    {stockTicker: ticker}).then((stock) => {
-      console.log('STOCK', stock)
-      cb(null, stock)
-  })
+    { stockTicker: ticker },
+  ).then((stock) => {
+    cb(null, stock);
+  });
 };
 
-// define Transaction model
-var Stock = mongoose.model('Stock', stockSchema);
-
-module.exports = Stock
-module.exports.getStock = getStock
+module.exports = Stock;
+module.exports.getStock = getStock;
