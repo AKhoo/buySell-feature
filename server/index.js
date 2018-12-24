@@ -6,7 +6,7 @@ const transactions = require('../database/Transaction.js')
 const stocks = require('../database/Stock.js')
 const port = 3333;
 
-// app.use(express.static('public'));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {

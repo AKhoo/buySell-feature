@@ -78,7 +78,7 @@ const newTransaction = (transaction, cb) => {
     filledQuantity: 0,
     totalCost: 0.00,
   };
-  console.log(newTransaction);
+  console.log(newTx);
   Transaction.update({ stockTicker: transaction.stockTicker }, newTx,
     { upsert: true }).then((tx) => {
     cb(null, tx);
