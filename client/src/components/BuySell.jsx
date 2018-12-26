@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const Form = styled.form`
   margin: 0 auto;
@@ -46,17 +47,34 @@ const TitleHeader = styled.div`
   background-color: #1b1b1d;
 `;
 
-const Button = styled.button`
+const BodyLabel = styled.label`
+  width: 227.77px;
+  height: 48px;
   font-size: 1.5em;
   font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #1b1b1d;
   color: white;
 `;
 
-const Input = styled.input`
+const BodyDiv = styled.div`
   font-size: 1.45em;
   font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
   border: 1px solid #ddd;
+`;
+
+const BodyInput = styled.input`
+  width: 82px;
+  height: 36px;
+  font-size: 1.45em;
+  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 1px solid #ddd;
+`;
+
+const Button = styled.button`
+  font-size: 1.5em;
+  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #1b1b1d;
+  color: white;
 `;
 
 class BuySell extends React.Component {
@@ -66,9 +84,8 @@ class BuySell extends React.Component {
   }
 
   buyStock(e) {
-    const email = new FormData(e.target).get('email');
     e.preventDefault();
-    console.log(`New signup from ${email}`);
+
   }
 
   render() {
@@ -79,8 +96,20 @@ class BuySell extends React.Component {
           Buy FB
         </TitleHeader>
       </Header>
-      <Input type="text" name="quantity" />
-      <Button>BUY</Button>
+        <BodyLabel>
+          <BodyDiv>Shares
+          <BodyInput></BodyInput>
+          </BodyDiv>
+        </BodyLabel>
+        <BodyLabel>
+          <BodyDiv>Market Price
+          $132.41</BodyDiv>
+        </BodyLabel>
+        <BodyLabel>
+          <BodyDiv>Estimated Cost
+          $132.41</BodyDiv>
+        </BodyLabel>
+        <Button>BUY</Button>
     </Form>
     );
   }

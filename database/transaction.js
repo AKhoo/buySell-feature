@@ -64,6 +64,12 @@ const Transaction = mongoose.model('Transaction', transactionSchema);
 
 
 // methods
+const loadAll = (cb) => {
+  Transaction.find({}).then((stock) => {
+    cb(null, stock);
+  });
+};
+
 const newTransaction = (transaction, cb) => {
   const newTx = {
     stockName: transaction.stockName,
@@ -88,3 +94,4 @@ const newTransaction = (transaction, cb) => {
 // export
 module.exports = Transaction;
 module.exports.newTransaction = newTransaction;
+module.exports.loadAll = loadAll;
