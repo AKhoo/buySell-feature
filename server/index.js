@@ -20,6 +20,16 @@ app.get('/stocks/:stockTicker', (req, res) => {
   });
 });
 
+app.get('/transactions', (req, res) => {
+  transactions.loadAll((err, data) => {
+    if (err) {
+      res.json({ message: "Who knows what you've been up to!" });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 app.post('/transactions', (req, res) => {
   const transaction = {
     stockName: req.body.stockName,

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import Transaction from './Transaction.jsx';
 
 class History extends React.Component {
   constructor(props) {
