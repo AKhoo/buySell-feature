@@ -16,7 +16,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 // RUN THIS CODE TO SEED MONGO DATABASE
 // mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline
 
-
 const { Schema } = mongoose.Schema;
 
 module.exports = Schema;

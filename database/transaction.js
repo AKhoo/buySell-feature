@@ -65,8 +65,8 @@ const Transaction = mongoose.model('Transaction', transactionSchema);
 
 // methods
 const loadAll = (cb) => {
-  Transaction.find({}).then((stock) => {
-    cb(null, stock);
+  Transaction.find({}).then((txs) => {
+    cb(null, txs);
   });
 };
 
