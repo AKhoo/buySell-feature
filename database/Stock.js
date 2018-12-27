@@ -37,5 +37,12 @@ const getStock = (ticker, cb) => {
   });
 };
 
+const loadAllStocks = (cb) => {
+  Stock.find({}).then((stocks) => {
+    cb(null, stocks);
+  });
+};
+
 module.exports = Stock;
 module.exports.getStock = getStock;
+module.exports.loadAllStocks = loadAllStocks;

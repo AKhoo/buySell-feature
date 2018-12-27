@@ -20,6 +20,16 @@ app.get('/stocks/:stockTicker', (req, res) => {
   });
 });
 
+app.get('/stocks', (req, res) => {
+  stocks.loadAllStocks((err, data) => {
+    if (err) {
+      res.json({ message: 'The market is no more' });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 app.get('/transactions', (req, res) => {
   transactions.loadAll((err, data) => {
     if (err) {
@@ -48,3 +58,5 @@ app.post('/transactions', (req, res) => {
 });
 
 app.listen(port, () => { console.log(`Listening on ${port} !!!`); });
+
+module.exports = app;
