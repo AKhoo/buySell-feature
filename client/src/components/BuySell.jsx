@@ -80,12 +80,39 @@ const Button = styled.button`
 class BuySell extends React.Component {
   constructor(props) {
       super(props);
+      this.state = {
+        stockName: '',
+        stockTicker: '',
+        currentPrice: '',
+        shares: ''
+      }
       this.buyStock = this.buyStock.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({
+      shares: e.target.value
+    })
   }
 
   buyStock(e) {
+    const transaction = {
+      stockName: req.body.stockName,
+      stockTicker: req.body.stockTicker,
+      currentPrice: req.body.currentPrice,
+      quantity: this.state.shares,
+    };
     e.preventDefault();
-
+    if (parseInt(this.state.shares) !== NaN){
+      axios.post('/transactions', { name:term })
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+    }
   }
 
   render() {
@@ -98,7 +125,7 @@ class BuySell extends React.Component {
       </Header>
         <BodyLabel>
           <BodyDiv>Shares
-          <BodyInput></BodyInput>
+          <BodyInput onChange={this.handleChange}></BodyInput>
           </BodyDiv>
         </BodyLabel>
         <BodyLabel>
@@ -109,7 +136,7 @@ class BuySell extends React.Component {
           <BodyDiv>Estimated Cost
           $132.41</BodyDiv>
         </BodyLabel>
-        <Button>BUY</Button>
+        <Button onClick={this.buyStock}>BUY</Button>
     </Form>
     );
   }
