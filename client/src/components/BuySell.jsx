@@ -2,9 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
+const BasicDiv = styled.div`
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
 const Form = styled.form`
-background-color: rgb(255, 255, 255);
-border-bottom-color: rgb(244, 244, 245);
+background-color: rgb(27, 27, 29);
+border-bottom-color: rgb(14, 13, 13);
 border-bottom-left-radius: 2px;
 border-bottom-right-radius: 2px;
 border-bottom-style: none;
@@ -14,24 +22,25 @@ border-image-repeat: stretch;
 border-image-slice: 100%;
 border-image-source: none;
 border-image-width: 1;
-border-left-color: rgb(244, 244, 245);
+border-left-color: rgb(14, 13, 13);
 border-left-style: none;
 border-left-width: 0px;
-border-right-color: rgb(244, 244, 245);
+border-right-color: rgb(14, 13, 13);
 border-right-style: none;
 border-right-width: 0px;
-border-top-color: rgb(244, 244, 245);
+border-top-color: rgb(14, 13, 13);
 border-top-left-radius: 2px;
 border-top-right-radius: 2px;
 border-top-style: none;
 border-top-width: 0px;
-box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(0, 0, 0, 0.6) 0px 3px 24px 0px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
 font-weight: 400;
+height: 404px;
 letter-spacing: 0.25px;
 line-height: 19px;
 margin-top: 0px;
@@ -42,20 +51,21 @@ padding-top: 0px;
 position: relative;
 text-align: left;
 text-size-adjust: 100%;
+width: 275.766px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Header = styled.header`
 align-items: center;
-border-bottom-color: rgb(244, 244, 245);
+border-bottom-color: rgb(14, 13, 13);
 border-bottom-style: solid;
 border-bottom-width: 1px;
-border-left-color: rgb(244, 244, 245);
-border-right-color: rgb(244, 244, 245);
-border-top-color: rgb(244, 244, 245);
+border-left-color: rgb(14, 13, 13);
+border-right-color: rgb(14, 13, 13);
+border-top-color: rgb(14, 13, 13);
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -84,7 +94,7 @@ width: 275.766px;
 const TitleHeader = styled.div`
 align-items: center;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -107,7 +117,7 @@ width: 227.766px;
 
 const BuySellDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -117,14 +127,14 @@ letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
 text-size-adjust: 100%;
-width: 114.828px;
+width: 153.391px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const BuySellDiv2 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -134,14 +144,14 @@ letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
 text-size-adjust: 100%;
-width: 114.828px;
+width: 153.391px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const BuyDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -158,14 +168,14 @@ transition-duration: 0.25s, 0.25s;
 transition-property: margin-right, opacity;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 63px;
+width: 82.2812px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const BuyDiv2 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -180,20 +190,20 @@ transition-duration: 0.25s;
 transition-property: width;
 transition-timing-function: ease;
 white-space: nowrap;
-width: 63px;
+width: 82.2812px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Buy = styled.h3`
-border-bottom-color: rgb(244, 85, 49);
+border-bottom-color: rgb(33, 206, 153);
 border-bottom-style: solid;
 border-bottom-width: 2px;
-border-left-color: rgb(244, 85, 49);
-border-right-color: rgb(244, 85, 49);
-border-top-color: rgb(244, 85, 49);
+border-left-color: rgb(33, 206, 153);
+border-right-color: rgb(33, 206, 153);
+border-top-color: rgb(33, 206, 153);
 box-sizing: border-box;
-color: rgb(244, 85, 49);
+color: rgb(33, 206, 153);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 16px;
@@ -217,14 +227,14 @@ transition-duration: 0.25s, 0.25s;
 transition-property: border-color, color;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 51px;
+width: 70.2812px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const SellDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -241,14 +251,14 @@ transition-duration: 0.25s, 0.25s;
 transition-property: margin-right, opacity;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 51.8281px;
+width: 71.1094px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const SellDiv2 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -263,7 +273,7 @@ transition-duration: 0.25s;
 transition-property: width;
 transition-timing-function: ease;
 white-space: nowrap;
-width: 51.8281px;
+width: 71.1094px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -273,7 +283,7 @@ border-bottom-color: rgba(0, 0, 0, 0);
 border-bottom-style: solid;
 border-bottom-width: 2px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: pointer;
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -298,19 +308,19 @@ transition-duration: 0.25s, 0.25s;
 transition-property: border-color, color;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 51.8281px;
+width: 71.1094px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Body = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
 font-weight: 400;
-height: 302px;
+height: 352px;
 letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
@@ -322,7 +332,7 @@ width: 227.766px;
 
 const MainBodyDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -342,7 +352,7 @@ width: 227.766px;
 
 const ButtonDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -358,12 +368,12 @@ width: 227.766px;
 `;
 
 const ButtonDiv2 = styled.div`
-background-color: rgb(255, 255, 255);
+background-color: rgb(27, 27, 29);
 border-top-color: rgba(0, 0, 0, 0);
 border-top-style: solid;
 border-top-width: 1px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -390,9 +400,14 @@ width: 275.766px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
+
+
+
+
+
 const ButtonDiv3 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -407,26 +422,11 @@ width: 227.766px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const BodyLabel = styled.label`
-  width: 227.77p;
-  height: 48p;
-`;
-
-const BodyDiv = styled.div`
-  border: 1px solid #dd;
-`;
-
-const BodyInput = styled.input`
-  width: 82p;
-  height: 36p;
-  border: 1px solid #dd;
-`;
-
 const Button = styled.button`
 align-items: center;
 background-attachment: scroll;
 background-clip: border-box;
-background-color: rgb(244, 85, 49);
+background-color: rgb(33, 206, 153);
 background-image: none;
 background-origin: padding-box;
 background-position-x: 0%;
@@ -434,7 +434,7 @@ background-position-y: 0%;
 background-repeat-x:;
 background-repeat-y:;
 background-size: auto;
-border-bottom-color: rgb(244, 85, 49);
+border-bottom-color: rgb(33, 206, 153);
 border-bottom-left-radius: 4px;
 border-bottom-right-radius: 4px;
 border-bottom-style: solid;
@@ -444,19 +444,19 @@ border-image-repeat: stretch;
 border-image-slice: 100%;
 border-image-source: none;
 border-image-width: 1;
-border-left-color: rgb(244, 85, 49);
+border-left-color: rgb(33, 206, 153);
 border-left-style: solid;
 border-left-width: 1px;
-border-right-color: rgb(244, 85, 49);
+border-right-color: rgb(33, 206, 153);
 border-right-style: solid;
 border-right-width: 1px;
-border-top-color: rgb(244, 85, 49);
+border-top-color: rgb(33, 206, 153);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 border-top-style: solid;
 border-top-width: 1px;
 box-sizing: border-box;
-color: rgb(255, 255, 255);
+color: rgb(27, 27, 29);
 cursor: pointer;
 display: inline-flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -501,14 +501,14 @@ writing-mode: horizontal-tb;
 
 const BuyingPowerDiv = styled.div`
 align-items: center;
-border-bottom-color: rgb(244, 244, 245);
-border-left-color: rgb(244, 244, 245);
-border-right-color: rgb(244, 244, 245);
-border-top-color: rgb(244, 244, 245);
+border-bottom-color: rgb(14, 13, 13);
+border-left-color: rgb(14, 13, 13);
+border-right-color: rgb(14, 13, 13);
+border-top-color: rgb(14, 13, 13);
 border-top-style: solid;
 border-top-width: 1px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -529,6 +529,556 @@ width: 275.766px;
 -webkit-box-pack: center;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
+
+const OrderTimeRow = styled.div`
+align-items:
+center
+;
+box-sizing:
+border-box
+;
+color:
+rgb(255, 255, 255)
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+38px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-bottom:
+12px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const CheckBoxDiv = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(255, 255, 255)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+20px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-right:
+12px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+20px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const CheckBoxDiv2 = styled.span`
+background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(33, 206, 153)
+;
+background-image:
+none
+;
+background-origin:
+padding-box
+;
+background-position-x:
+0%
+;
+background-position-y:
+0%
+;
+background-repeat-x:
+;
+background-repeat-y:
+;
+background-size:
+auto
+;
+border-bottom-color:
+rgb(33, 206, 153)
+;
+border-bottom-left-radius:
+4px
+;
+border-bottom-right-radius:
+4px
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+2px
+;
+border-image-outset:
+0px
+;
+border-image-repeat:
+stretch
+;
+border-image-slice:
+100%
+;
+border-image-source:
+none
+;
+border-image-width:
+1
+;
+border-left-color:
+rgb(33, 206, 153)
+;
+border-left-style:
+solid
+;
+border-left-width:
+2px
+;
+border-right-color:
+rgb(33, 206, 153)
+;
+border-right-style:
+solid
+;
+border-right-width:
+2px
+;
+border-top-color:
+rgb(33, 206, 153)
+;
+border-top-left-radius:
+4px
+;
+border-top-right-radius:
+4px
+;
+border-top-style:
+solid
+;
+border-top-width:
+2px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(255, 255, 255)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+20px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+overflow-x:
+hidden
+;
+overflow-y:
+hidden
+;
+position:
+relative
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+20px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const SVG = styled.svg`
+box-sizing:
+border-box
+;
+color:
+rgb(27, 27, 29)
+;
+display:
+block
+;
+fill:
+rgb(27, 27, 29)
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+20px
+;
+left:
+-2px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+opacity:
+1
+;
+overflow-x:
+visible
+;
+overflow-y:
+visible
+;
+padding-bottom:
+4px
+;
+padding-left:
+4px
+;
+padding-right:
+4px
+;
+padding-top:
+4px
+;
+position:
+absolute
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+top:
+-2px
+;
+transform:
+none
+;
+transition-delay:
+0s, 0s, 0s
+;
+transition-duration:
+0.3s, 0.2s, 0.3s
+;
+transition-property:
+transform, opacity, -webkit-transform
+;
+transition-timing-function:
+cubic-bezier(0.18, 0.89, 0.32, 1.28), ease, cubic-bezier(0.18, 0.89, 0.32, 1.28)
+;
+width:
+20px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const G = styled.g`
+box-sizing:
+border-box
+;
+color:
+rgb(27, 27, 29)
+;
+display:
+inline
+;
+fill:
+rgb(27, 27, 29)
+;
+fill-rule:
+evenodd
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+auto
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transform:
+matrix(0.707107, 0.707107, -0.707107, 0.707107, 7.41392, -2.6568)
+;
+transform-origin:
+0px 0px
+;
+width:
+auto
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const Rect1 = styled.rect`
+box-sizing:
+border-box
+;
+color:
+rgb(27, 27, 29)
+;
+display:
+inline
+;
+fill:
+rgb(27, 27, 29)
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+10px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transform-origin:
+0px 0px
+;
+width:
+2px
+;
+x:
+4px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const Rect2 = styled.rect`
+box-sizing:
+border-box
+;
+color:
+rgb(27, 27, 29)
+;
+display:
+inline
+;
+fill:
+rgb(27, 27, 29)
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+2px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transform-origin:
+0px 0px
+;
+width:
+5px
+;
+y:
+8px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
+
+const OrderTimeSpan = styled.span`
+box-sizing:
+border-box
+;
+color:
+rgb(140, 140, 142)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+38px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+195.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+` ;
 
 const FormGroup = styled.div`
 box-sizing: border-box;
@@ -985,6 +1535,19 @@ class BuySell extends React.Component {
           </EstimatedCostLabel>
         </EstimatedCostRow>
         </MainBodyDiv>
+        <OrderTimeRow>
+          <CheckBoxDiv>
+            <CheckBoxDiv2>
+              <SVG>
+                <G>
+                  <Rect1></Rect1>
+                  <Rect2></Rect2>
+                </G>
+              </SVG>
+            </CheckBoxDiv2>
+          </CheckBoxDiv>
+          <OrderTimeSpan>This order should only execute during normal market hours.</OrderTimeSpan>
+        </OrderTimeRow>
         <ButtonDiv>
           <ButtonDiv2>
             <ButtonDiv3>
