@@ -1,6 +1,99 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Div3 = styled.div`
+border-bottom-color:
+rgba(0, 0, 0, 0)
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+1px
+;
+border-left-color:
+rgb(14, 13, 13)
+;
+border-right-color:
+rgb(14, 13, 13)
+;
+border-top-color:
+rgba(0, 0, 0, 0)
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(255, 255, 255)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+333px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-bottom:
+0px
+;
+margin-left:
+24px
+;
+margin-right:
+24px
+;
+margin-top:
+0px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transition-delay:
+0s
+;
+transition-duration:
+0.15s
+;
+transition-property:
+border-color
+;
+transition-timing-function:
+ease
+;
+width:
+678.656px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
 const Div4 = styled.div`
 border-bottom-left-radius:
 4px
@@ -462,18 +555,18 @@ rgba(0, 0, 0, 0)
 
 export default function Transaction (props) {
   return (
-          <div>
+          <Div3>
             <Div4>
                <Div6>
-               <li>{props.tx.stockName}, {props.tx.stockTicker}, {props.tx.status}</li>
                 <H31>Market Buy</H31>
+                {props.tx.date}
                </Div6>
                <Div7>
-                <H32></H32>
-                <Span1></Span1>
+                <H32>{props.tx.currentPrice}</H32>
+                <Span1>{props.tx.quantity} shares at {props.tx.currentPrice}</Span1>
                </Div7>
-             </Div4>
-             <Div5></Div5>
-             </div>
+            </Div4>
+            <Div5></Div5>
+          </Div3>
   )
 }
