@@ -2,13 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-const BasicDiv = styled.div`
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
 
 const Form = styled.form`
 background-color: rgb(27, 27, 29);
@@ -400,11 +393,6 @@ width: 275.766px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-
-
-
-
-
 const ButtonDiv3 = styled.div`
 box-sizing: border-box;
 color: rgb(255, 255, 255);
@@ -531,558 +519,208 @@ width: 275.766px;
 `;
 
 const OrderTimeRow = styled.div`
-align-items:
-center
-;
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-flex
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-38px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-bottom:
-12px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-227.766px
-;
--webkit-box-align:
-center
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+align-items: center;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: flex;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 38px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 227.766px;
+-webkit-box-align: center;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CheckBoxDiv = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-20px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-right:
-12px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-20px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 20px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-right: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 20px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CheckBoxDiv2 = styled.span`
-background-attachment:
-scroll
-;
-background-clip:
-border-box
-;
-background-color:
-rgb(33, 206, 153)
-;
-background-image:
-none
-;
-background-origin:
-padding-box
-;
-background-position-x:
-0%
-;
-background-position-y:
-0%
-;
-background-repeat-x:
-;
-background-repeat-y:
-;
-background-size:
-auto
-;
-border-bottom-color:
-rgb(33, 206, 153)
-;
-border-bottom-left-radius:
-4px
-;
-border-bottom-right-radius:
-4px
-;
-border-bottom-style:
-solid
-;
-border-bottom-width:
-2px
-;
-border-image-outset:
-0px
-;
-border-image-repeat:
-stretch
-;
-border-image-slice:
-100%
-;
-border-image-source:
-none
-;
-border-image-width:
-1
-;
-border-left-color:
-rgb(33, 206, 153)
-;
-border-left-style:
-solid
-;
-border-left-width:
-2px
-;
-border-right-color:
-rgb(33, 206, 153)
-;
-border-right-style:
-solid
-;
-border-right-width:
-2px
-;
-border-top-color:
-rgb(33, 206, 153)
-;
-border-top-left-radius:
-4px
-;
-border-top-right-radius:
-4px
-;
-border-top-style:
-solid
-;
-border-top-width:
-2px
-;
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-20px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-overflow-x:
-hidden
-;
-overflow-y:
-hidden
-;
-position:
-relative
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-20px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(33, 206, 153);
+background-image: none;
+background-origin: padding-box;
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat-x:;
+background-repeat-y:;
+background-size: auto;
+border-bottom-color: rgb(33, 206, 153);
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(33, 206, 153);
+border-left-style: solid;
+border-left-width: 2px;
+border-right-color: rgb(33, 206, 153);
+border-right-style: solid;
+border-right-width: 2px;
+border-top-color: rgb(33, 206, 153);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-top-style: solid;
+border-top-width: 2px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 20px;
+letter-spacing: 0.25px;
+line-height: 19px;
+overflow-x: hidden;
+overflow-y: hidden;
+position: relative;
+text-align: left;
+text-size-adjust: 100%;
+width: 20px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const SVG = styled.svg`
-box-sizing:
-border-box
-;
-color:
-rgb(27, 27, 29)
-;
-display:
-block
-;
-fill:
-rgb(27, 27, 29)
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-20px
-;
-left:
--2px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-opacity:
-1
-;
-overflow-x:
-visible
-;
-overflow-y:
-visible
-;
-padding-bottom:
-4px
-;
-padding-left:
-4px
-;
-padding-right:
-4px
-;
-padding-top:
-4px
-;
-position:
-absolute
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-top:
--2px
-;
-transform:
-none
-;
-transition-delay:
-0s, 0s, 0s
-;
-transition-duration:
-0.3s, 0.2s, 0.3s
-;
-transition-property:
-transform, opacity, -webkit-transform
-;
-transition-timing-function:
-cubic-bezier(0.18, 0.89, 0.32, 1.28), ease, cubic-bezier(0.18, 0.89, 0.32, 1.28)
-;
-width:
-20px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(27, 27, 29);
+display: block;
+fill: rgb(27, 27, 29);
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 20px;
+left: -2px;
+letter-spacing: 0.25px;
+line-height: 19px;
+opacity: 1;
+overflow-x: visible;
+overflow-y: visible;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 4px;
+position: absolute;
+text-align: left;
+text-size-adjust: 100%;
+top: -2px;
+transform: none;
+transition-delay: 0s, 0s, 0s;
+transition-duration: 0.3s, 0.2s, 0.3s;
+transition-property: transform, opacity, -webkit-transform;
+transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28), ease, cubic-bezier(0.18, 0.89, 0.32, 1.28);
+width: 20px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const G = styled.g`
-box-sizing:
-border-box
-;
-color:
-rgb(27, 27, 29)
-;
-display:
-inline
-;
-fill:
-rgb(27, 27, 29)
-;
-fill-rule:
-evenodd
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-auto
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-transform:
-matrix(0.707107, 0.707107, -0.707107, 0.707107, 7.41392, -2.6568)
-;
-transform-origin:
-0px 0px
-;
-width:
-auto
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(27, 27, 29);
+display: inline;
+fill: rgb(27, 27, 29);
+fill-rule: evenodd;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: auto;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+transform: matrix(0.707107, 0.707107, -0.707107, 0.707107, 7.41392, -2.6568);
+transform-origin: 0px 0px;
+width: auto;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const Rect1 = styled.rect`
-box-sizing:
-border-box
-;
-color:
-rgb(27, 27, 29)
-;
-display:
-inline
-;
-fill:
-rgb(27, 27, 29)
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-10px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-transform-origin:
-0px 0px
-;
-width:
-2px
-;
-x:
-4px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(27, 27, 29);
+display: inline;
+fill: rgb(27, 27, 29);
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 10px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+transform-origin: 0px 0px;
+width: 2px;
+x: 4px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const Rect2 = styled.rect`
-box-sizing:
-border-box
-;
-color:
-rgb(27, 27, 29)
-;
-display:
-inline
-;
-fill:
-rgb(27, 27, 29)
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-2px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-transform-origin:
-0px 0px
-;
-width:
-5px
-;
-y:
-8px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(27, 27, 29);
+display: inline;
+fill: rgb(27, 27, 29);
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 2px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+transform-origin: 0px 0px;
+width: 5px;
+y: 8px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const OrderTimeSpan = styled.span`
-box-sizing:
-border-box
-;
-color:
-rgb(140, 140, 142)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-38px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-195.766px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(140, 140, 142);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 38px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+width: 195.766px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const FormGroup = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1100,7 +738,7 @@ width: 227.766px;
 const Label = styled.label`
 align-items: center;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1122,7 +760,7 @@ width: 227.766px;
 
 const Shares = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1141,7 +779,7 @@ width: 41.6719px;
 
 const SharesInputDiv = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1161,7 +799,7 @@ width: 82px;
 const SharesInput = styled.input`
 background-attachment: scroll;
 background-clip: border-box;
-background-color: rgb(250, 250, 250);
+background-color: rgb(23, 23, 24);
 background-image: none;
 background-origin: padding-box;
 background-position-x: 0%;
@@ -1169,7 +807,7 @@ background-position-y: 0%;
 background-repeat-x:;
 background-repeat-y:;
 background-size: auto;
-border-bottom-color: rgb(250, 250, 250);
+border-bottom-color: rgb(23, 23, 24);
 border-bottom-left-radius: 4px;
 border-bottom-right-radius: 4px;
 border-bottom-style: solid;
@@ -1179,19 +817,19 @@ border-image-repeat: stretch;
 border-image-slice: 100%;
 border-image-source: none;
 border-image-width: 1;
-border-left-color: rgb(250, 250, 250);
+border-left-color: rgb(23, 23, 24);
 border-left-style: solid;
 border-left-width: 1px;
-border-right-color: rgb(250, 250, 250);
+border-right-color: rgb(23, 23, 24);
 border-right-style: solid;
 border-right-width: 1px;
-border-top-color: rgb(250, 250, 250);
+border-top-color: rgb(23, 23, 24);
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 border-top-style: solid;
 border-top-width: 1px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: text;
 display: inline-block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1210,7 +848,7 @@ margin-bottom: 0px;
 margin-left: 0px;
 margin-right: 0px;
 margin-top: 0px;
-outline-color: rgb(23, 23, 24);
+outline-color: rgb(255, 255, 255);
 outline-style: none;
 outline-width: 0px;
 overflow-x: visible;
@@ -1243,7 +881,7 @@ writing-mode: horizontal-tb;
 const MarketPriceRow = styled.div`
 align-items: center;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1266,7 +904,7 @@ width: 227.766px;
 
 const MarketPriceDiv1 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1284,7 +922,7 @@ width: 78.1719px;
 
 const MarketPriceDiv2 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1307,7 +945,7 @@ border-bottom-color: rgba(0, 0, 0, 0);
 border-bottom-style: solid;
 border-bottom-width: 2px;
 box-sizing: border-box;
-color: rgb(244, 85, 49);
+color: rgb(33, 206, 153);
 cursor: pointer;
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1318,7 +956,7 @@ letter-spacing: 0.25px;
 line-height: 19px;
 padding-top: 2px;
 text-align: left;
-text-decoration-color: rgb(244, 85, 49);
+text-decoration-color: rgb(33, 206, 153);
 text-decoration-line: none;
 text-decoration-style: solid;
 text-size-adjust: 100%;
@@ -1331,7 +969,7 @@ width: 78.1719px;
 
 const MarketPriceSpan = styled.span`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1351,14 +989,14 @@ width: 47.9219px;
 `;
 
 const EstimatedCostRow = styled.div`
-border-bottom-color: rgb(244, 244, 245);
-border-left-color: rgb(244, 244, 245);
-border-right-color: rgb(244, 244, 245);
-border-top-color: rgb(244, 244, 245);
+border-bottom-color: rgb(14, 13, 13);
+border-left-color: rgb(14, 13, 13);
+border-right-color: rgb(14, 13, 13);
+border-top-color: rgb(14, 13, 13);
 border-top-style: solid;
 border-top-width: 1px;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
@@ -1377,7 +1015,7 @@ width: 227.766px;
 const EstimatedCostLabel = styled.label`
 align-items: center;
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1400,7 +1038,7 @@ width: 215.766px;
 
 const ECDiv1 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
@@ -1424,7 +1062,7 @@ width: 110px;
 
 const ECDiv2 = styled.div`
 box-sizing: border-box;
-color: rgb(23, 23, 24);
+color: rgb(255, 255, 255);
 cursor: default;
 display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
