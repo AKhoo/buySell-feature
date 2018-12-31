@@ -1102,7 +1102,7 @@ class BuySell extends React.Component {
     var cost = (e.target.value * this.state.currentPrice)
     this.setState({
       shares: e.target.value,
-      estimatedCost: cost
+      estimatedCost: cost.toFixed(2)
     })
   }
 
