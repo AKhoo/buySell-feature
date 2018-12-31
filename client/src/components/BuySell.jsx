@@ -222,11 +222,511 @@ width: 51px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
+const SellDiv = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+47px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+overflow-x:
+hidden
+;
+overflow-y:
+hidden
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transition-delay:
+0s, 0s
+;
+transition-duration:
+0.25s, 0.25s
+;
+transition-property:
+margin-right, opacity
+;
+transition-timing-function:
+ease, ease
+;
+white-space:
+nowrap
+;
+width:
+51.8281px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const SellDiv2 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+47px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transition-delay:
+0s
+;
+transition-duration:
+0.25s
+;
+transition-property:
+width
+;
+transition-timing-function:
+ease
+;
+white-space:
+nowrap
+;
+width:
+51.8281px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const Sell = styled.h3`
+border-bottom-color:
+rgba(0, 0, 0, 0)
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+2px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+pointer
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+16px
+;
+font-weight:
+500
+;
+height:
+47px
+;
+letter-spacing:
+normal
+;
+line-height:
+22px
+;
+margin-block-end:
+0px
+;
+margin-block-start:
+0px
+;
+margin-bottom:
+0px
+;
+margin-inline-end:
+0px
+;
+margin-inline-start:
+0px
+;
+margin-left:
+0px
+;
+margin-right:
+0px
+;
+margin-top:
+0px
+;
+padding-top:
+12px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transition-delay:
+0s, 0s
+;
+transition-duration:
+0.25s, 0.25s
+;
+transition-property:
+border-color, color
+;
+transition-timing-function:
+ease, ease
+;
+white-space:
+nowrap
+;
+width:
+51.8281px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
 const Body = styled.div`
-  font-size: 1.5em;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #1b1b1d;
-  color: white;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+302px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const MainBodyDiv = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+169px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+padding-bottom:
+12px
+;
+padding-top:
+12px
+;
+position:
+relative
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const ButtonDiv = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+85px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const ButtonDiv2 = styled.div`
+background-color:
+rgb(255, 255, 255)
+;
+border-top-color:
+rgba(0, 0, 0, 0)
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+85px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-bottom:
+0px
+;
+margin-left:
+-24px
+;
+margin-right:
+-24px
+;
+margin-top:
+0px
+;
+padding-bottom:
+24px
+;
+padding-left:
+24px
+;
+padding-right:
+24px
+;
+padding-top:
+12px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+transition-delay:
+0s
+;
+transition-duration:
+0.25s
+;
+transition-property:
+border-color
+;
+transition-timing-function:
+ease
+;
+width:
+275.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const ButtonDiv3 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
 `;
 
 const BodyLabel = styled.label`
@@ -245,10 +745,313 @@ const BodyInput = styled.input`
 `;
 
 const Button = styled.button`
-  font-size: 1.5em;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #1b1b1d;
-  color: white;
+align-items:
+center
+;
+background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(244, 85, 49)
+;
+background-image:
+none
+;
+background-origin:
+padding-box
+;
+background-position-x:
+0%
+;
+background-position-y:
+0%
+;
+background-repeat-x:
+;
+background-repeat-y:
+;
+background-size:
+auto
+;
+border-bottom-color:
+rgb(244, 85, 49)
+;
+border-bottom-left-radius:
+4px
+;
+border-bottom-right-radius:
+4px
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+1px
+;
+border-image-outset:
+0px
+;
+border-image-repeat:
+stretch
+;
+border-image-slice:
+100%
+;
+border-image-source:
+none
+;
+border-image-width:
+1
+;
+border-left-color:
+rgb(244, 85, 49)
+;
+border-left-style:
+solid
+;
+border-left-width:
+1px
+;
+border-right-color:
+rgb(244, 85, 49)
+;
+border-right-style:
+solid
+;
+border-right-width:
+1px
+;
+border-top-color:
+rgb(244, 85, 49)
+;
+border-top-left-radius:
+4px
+;
+border-top-right-radius:
+4px
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(255, 255, 255)
+;
+cursor:
+pointer
+;
+display:
+inline-flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-stretch:
+100%
+;
+font-style:
+normal
+;
+font-variant-caps:
+normal
+;
+font-variant-east-asian:
+normal
+;
+font-variant-ligatures:
+normal
+;
+font-variant-numeric:
+normal
+;
+font-weight:
+500
+;
+height:
+48px
+;
+justify-content:
+center
+;
+letter-spacing:
+normal
+;
+line-height:
+14.95px
+;
+margin-bottom:
+0px
+;
+margin-left:
+0px
+;
+margin-right:
+0px
+;
+margin-top:
+0px
+;
+overflow-x:
+visible
+;
+overflow-y:
+visible
+;
+padding-bottom:
+0px
+;
+padding-left:
+32px
+;
+padding-right:
+32px
+;
+padding-top:
+0px
+;
+text-align:
+center
+;
+text-indent:
+0px
+;
+text-rendering:
+auto
+;
+text-shadow:
+none
+;
+text-size-adjust:
+100%
+;
+text-transform:
+none
+;
+width:
+227.766px
+;
+word-spacing:
+0px
+;
+writing-mode:
+horizontal-tb
+;
+-webkit-appearance:
+none
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-box-pack:
+center
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+-webkit-border-image:
+none
+;
+`;
+
+const BuyingPowerDiv = styled.div`
+align-items:
+center
+;
+border-bottom-color:
+rgb(244, 244, 245)
+;
+border-left-color:
+rgb(244, 244, 245)
+;
+border-right-color:
+rgb(244, 244, 245)
+;
+border-top-color:
+rgb(244, 244, 245)
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+justify-content:
+center
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-bottom:
+0px
+;
+margin-left:
+-24px
+;
+margin-right:
+-24px
+;
+margin-top:
+0px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+275.766px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-box-pack:
+center
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
 `;
 
 class BuySell extends React.Component {
@@ -305,11 +1108,19 @@ class BuySell extends React.Component {
                   </Buy>
                 </BuyDiv2>
               </BuyDiv>
+              <SellDiv>
+                <SellDiv2>
+                  <Sell>
+                  Sell {this.state.stockTicker}
+                  </Sell>
+                </SellDiv2>
+              </SellDiv>
             </BuySellDiv2>
           </BuySellDiv>
         </TitleHeader>
       </Header>
       <Body>
+        <MainBodyDiv>
         <BodyLabel>
           <BodyDiv>Shares
           <BodyInput onChange={this.handleChange}></BodyInput>
@@ -324,7 +1135,17 @@ class BuySell extends React.Component {
             {this.state.estimatedCost}
           </BodyDiv>
         </BodyLabel>
-        <Button onClick={this.buyStock}>BUY</Button>
+        </MainBodyDiv>
+        <ButtonDiv>
+          <ButtonDiv2>
+            <ButtonDiv3>
+            <Button onClick={this.buyStock}>BUY</Button>
+            </ButtonDiv3>
+          </ButtonDiv2>
+        </ButtonDiv>
+        <BuyingPowerDiv>$95.42
+          Buying Power Available
+        </BuyingPowerDiv>
       </Body>
     </Form>
     );
