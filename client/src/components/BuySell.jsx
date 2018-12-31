@@ -30,14 +30,6 @@ const Header = styled.h2`
 `;
 
 const TitleHeader = styled.div`
-  -webkit-box-align: center;
-  align-items: center;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  margin-bottom: 64px;
-  padding-top: 64px;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.25px;
@@ -47,26 +39,25 @@ const TitleHeader = styled.div`
   background-color: #1b1b1d;
 `;
 
-const BodyLabel = styled.label`
-  width: 227.77px;
-  height: 48px;
+const Body = styled.div`
   font-size: 1.5em;
   font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #1b1b1d;
   color: white;
 `;
 
+const BodyLabel = styled.label`
+  width: 227.77px;
+  height: 48px;
+`;
+
 const BodyDiv = styled.div`
-  font-size: 1.45em;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
   border: 1px solid #ddd;
 `;
 
 const BodyInput = styled.input`
   width: 82px;
   height: 36px;
-  font-size: 1.45em;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
   border: 1px solid #ddd;
 `;
 
@@ -102,14 +93,13 @@ class BuySell extends React.Component {
 
   buyStock(e) {
     const transaction = {
-      stockName: req.body.stockName,
-      stockTicker: req.body.stockTicker,
-      currentPrice: req.body.currentPrice,
+      stockName: this.state.stockName,
+      stockTicker: this.state.stockTicker,
+      currentPrice: this.state.currentPrice,
       quantity: this.state.shares,
     };
-    e.preventDefault();
-    if (parseInt(this.state.shares) !== NaN){
-      axios.post('/transactions', { name:term })
+    if (this.state.shares !== 0){
+      axios.post('/transactions', transaction)
       .then(function (response) {
       })
       .catch(function (error) {
@@ -120,12 +110,16 @@ class BuySell extends React.Component {
 
   render() {
     return (
-    <Form onSubmit={this.buyStock}>
+    <Form>
       <Header>
         <TitleHeader>
           Buy {this.state.stockTicker}
         </TitleHeader>
+        <TitleHeader>
+          Sell {this.state.stockTicker}
+        </TitleHeader>
       </Header>
+      <Body>
         <BodyLabel>
           <BodyDiv>Shares
           <BodyInput onChange={this.handleChange}></BodyInput>
@@ -141,6 +135,7 @@ class BuySell extends React.Component {
           </BodyDiv>
         </BodyLabel>
         <Button onClick={this.buyStock}>BUY</Button>
+      </Body>
     </Form>
     );
   }

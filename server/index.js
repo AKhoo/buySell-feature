@@ -10,7 +10,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {
-  console.log('PARAMMMMSSSSSS', req.params);
   stocks.getStock(req.params.stockTicker, (err, data) => {
     if (err) {
       res.json({ message: "what's a stock?" });

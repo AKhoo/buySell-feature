@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const Schema = require('./index.js');
-const db = mongoose.connection;
 
 // get current date and time string
 function getDateAndTime() {
@@ -11,7 +9,7 @@ function getDateAndTime() {
   // get current time as string
   const time = date.toLocaleTimeString();
   // return full string
-  return `dateStr ${' '} time`;
+  return `${dateStr}${' '}${time}`;
 }
 
 // define transaction schema
@@ -60,7 +58,7 @@ const transactionSchema = new mongoose.Schema({
 });
 
 // define Transaction model
-const Transaction = mongoose.model('Transaction', transactionSchema);
+const Transaction = mongoose.model('transaction', transactionSchema);
 
 
 // methods
@@ -71,7 +69,7 @@ const loadAll = (cb) => {
 };
 
 const newTransaction = (transaction, cb) => {
-  const newTx = {
+  const newTx = new Transaction({
     stockName: transaction.stockName,
     stockTicker: transaction.stockTicker,
     currentPrice: transaction.currentPrice,
@@ -83,10 +81,9 @@ const newTransaction = (transaction, cb) => {
     filled: 'TBD',
     filledQuantity: 0,
     totalCost: 0.00,
-  };
+  });
   console.log(newTx);
-  Transaction.update({ stockTicker: transaction.stockTicker }, newTx,
-    { upsert: true }).then((tx) => {
+  newTx.save().then((tx) => {
     cb(null, tx);
   });
 };

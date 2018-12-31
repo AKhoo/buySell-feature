@@ -26,12 +26,15 @@ class App extends React.Component {
         transactions: res.data
       })
     })
-    // axios.get('/stocks/:stockTicker').then(res => {
-    //   console.log('STOCCCCCCCK', res.data)
-    //   this.setState({
-    //     stock: res.data
-    //   })
-    // })
+  }
+
+  changeStock() {
+    axios.get('/stocks/:stockTicker').then(res => {
+      console.log('STOCCCCCCCK', res.data)
+      this.setState({
+        stock: res.data
+      })
+    })
   }
 
   render() {
