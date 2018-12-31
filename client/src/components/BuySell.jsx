@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const Form = styled.form`
-  margin: 0 auto;
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
   width: 275.77px;
   height: 488px
   font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -13,6 +20,8 @@ const Form = styled.form`
   padding-bottom: 90px;
   color: black;
   background: #1b1b1d;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 const Header = styled.h2`

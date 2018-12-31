@@ -82,7 +82,6 @@ const newTransaction = (transaction, cb) => {
     filledQuantity: 0,
     totalCost: 0.00,
   });
-  console.log(newTx);
   newTx.save().then((tx) => {
     cb(null, tx);
   });

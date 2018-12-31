@@ -2,6 +2,11 @@ import React from 'react';
 import BuySell from './BuySell.jsx';
 import History from './History.jsx';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const Div = styled.div`
+background: #1b1b1d;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -21,7 +26,6 @@ class App extends React.Component {
 
   componentDidMount() {
     axios.get('/transactions').then(res => {
-      // console.log('TXXXXXXXX', res.data)
       this.setState({
         transactions: res.data
       })
@@ -39,10 +43,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Div>
         <History transactions={this.state.transactions}/>
         <BuySell stock={this.state.stock}/>
-      </div>
+      </Div>
     )
   }
 };
