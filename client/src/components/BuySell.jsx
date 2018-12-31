@@ -1054,6 +1054,1007 @@ rgba(0, 0, 0, 0)
 ;
 `;
 
+const FormGroup = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const Label = styled.label`
+align-items:
+center
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+justify-content:
+space-between
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+227.766px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-box-pack:
+justify
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const Shares = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+19px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+41.6719px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const SharesInputDiv = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+36px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+82px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const SharesInput = styled.input`
+background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(250, 250, 250)
+;
+background-image:
+none
+;
+background-origin:
+padding-box
+;
+background-position-x:
+0%
+;
+background-position-y:
+0%
+;
+background-repeat-x:
+;
+background-repeat-y:
+;
+background-size:
+auto
+;
+border-bottom-color:
+rgb(250, 250, 250)
+;
+border-bottom-left-radius:
+4px
+;
+border-bottom-right-radius:
+4px
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+1px
+;
+border-image-outset:
+0px
+;
+border-image-repeat:
+stretch
+;
+border-image-slice:
+100%
+;
+border-image-source:
+none
+;
+border-image-width:
+1
+;
+border-left-color:
+rgb(250, 250, 250)
+;
+border-left-style:
+solid
+;
+border-left-width:
+1px
+;
+border-right-color:
+rgb(250, 250, 250)
+;
+border-right-style:
+solid
+;
+border-right-width:
+1px
+;
+border-top-color:
+rgb(250, 250, 250)
+;
+border-top-left-radius:
+4px
+;
+border-top-right-radius:
+4px
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+text
+;
+display:
+inline-block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-stretch:
+100%
+;
+font-style:
+normal
+;
+font-variant-caps:
+normal
+;
+font-variant-east-asian:
+normal
+;
+font-variant-ligatures:
+normal
+;
+font-variant-numeric:
+normal
+;
+font-weight:
+400
+;
+height:
+36px
+;
+letter-spacing:
+normal
+;
+line-height:
+19.5px
+;
+margin-bottom:
+0px
+;
+margin-left:
+0px
+;
+margin-right:
+0px
+;
+margin-top:
+0px
+;
+outline-color:
+rgb(23, 23, 24)
+;
+outline-style:
+none
+;
+outline-width:
+0px
+;
+overflow-x:
+visible
+;
+overflow-y:
+visible
+;
+padding-bottom:
+0px
+;
+padding-left:
+13px
+;
+padding-right:
+13px
+;
+padding-top:
+0px
+;
+text-align:
+right
+;
+text-indent:
+0px
+;
+text-rendering:
+auto
+;
+text-shadow:
+none
+;
+text-size-adjust:
+100%
+;
+text-transform:
+none
+;
+transition-delay:
+0s
+;
+transition-duration:
+0.2s
+;
+transition-property:
+border-color
+;
+transition-timing-function:
+ease
+;
+white-space:
+nowrap
+;
+width:
+82px
+;
+word-spacing:
+0px
+;
+writing-mode:
+horizontal-tb
+;
+-webkit-appearance:
+none
+;
+-webkit-box-direction:
+normal
+;
+-webkit-rtl-ordering:
+logical
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+-webkit-border-image:
+none
+;
+`;
+
+const MarketPriceRow = styled.div`
+align-items:
+center
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+justify-content:
+space-between
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+padding-right:
+12px
+;
+position:
+relative
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+227.766px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-box-pack:
+justify
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const MarketPriceDiv1 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+78.1719px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const MarketPriceDiv2 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+400
+;
+height:
+48px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+78.1719px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const MarketPrice = styled.a`
+align-items:
+center
+;
+background-color:
+rgba(0, 0, 0, 0)
+;
+border-bottom-color:
+rgba(0, 0, 0, 0)
+;
+border-bottom-style:
+solid
+;
+border-bottom-width:
+2px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(244, 85, 49)
+;
+cursor:
+pointer
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+48px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+padding-top:
+2px
+;
+text-align:
+left
+;
+text-decoration-color:
+rgb(244, 85, 49)
+;
+text-decoration-line:
+none
+;
+text-decoration-style:
+solid
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+78.1719px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const MarketPriceSpan = styled.span`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+19px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+overflow-x:
+hidden
+;
+overflow-y:
+hidden
+;
+text-align:
+right
+;
+text-overflow:
+ellipsis
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+47.9219px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const EstimatedCostRow = styled.div`
+border-bottom-color:
+rgb(244, 244, 245)
+;
+border-left-color:
+rgb(244, 244, 245)
+;
+border-right-color:
+rgb(244, 244, 245)
+;
+border-top-color:
+rgb(244, 244, 245)
+;
+border-top-style:
+solid
+;
+border-top-width:
+1px
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+49px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+padding-right:
+12px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+width:
+227.766px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const EstimatedCostLabel = styled.label`
+align-items:
+center
+;
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+flex
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+48px
+;
+justify-content:
+space-between
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+min-height:
+48px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+215.766px
+;
+-webkit-box-align:
+center
+;
+-webkit-box-direction:
+normal
+;
+-webkit-box-pack:
+justify
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const ECDiv1 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+19px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+margin-right:
+12px
+;
+min-width:
+48px
+;
+overflow-x:
+hidden
+;
+overflow-y:
+hidden
+;
+text-align:
+left
+;
+text-overflow:
+ellipsis
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+91.5469px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const ECDiv2 = styled.div`
+box-sizing:
+border-box
+;
+color:
+rgb(23, 23, 24)
+;
+cursor:
+default
+;
+display:
+block
+;
+font-family:
+"DIN Pro", -apple-system, system-ui, sans-serif
+;
+font-size:
+13px
+;
+font-weight:
+500
+;
+height:
+19px
+;
+letter-spacing:
+0.25px
+;
+line-height:
+19px
+;
+text-align:
+left
+;
+text-size-adjust:
+100%
+;
+white-space:
+nowrap
+;
+width:
+33.5625px
+;
+-webkit-box-direction:
+normal
+;
+-webkit-tap-highlight-color:
+rgba(0, 0, 0, 0)
+;
+`;
+
+const newOne = styled.div`
+
+`;
+
 class BuySell extends React.Component {
   constructor(props) {
       super(props);
@@ -1121,20 +2122,28 @@ class BuySell extends React.Component {
       </Header>
       <Body>
         <MainBodyDiv>
-        <BodyLabel>
-          <BodyDiv>Shares
-          <BodyInput onChange={this.handleChange}></BodyInput>
-          </BodyDiv>
-        </BodyLabel>
-        <BodyLabel>
-          <BodyDiv>Market Price
-          {this.state.currentPrice}</BodyDiv>
-        </BodyLabel>
-        <BodyLabel>
-          <BodyDiv>Estimated Cost
-            {this.state.estimatedCost}
-          </BodyDiv>
-        </BodyLabel>
+        <FormGroup>
+          <Label>
+            <Shares>Shares</Shares>
+            <SharesInputDiv>
+              <SharesInput onChange={this.handleChange}></SharesInput>
+            </SharesInputDiv>
+          </Label>
+        </FormGroup>
+        <MarketPriceRow>
+          <MarketPriceDiv1>
+            <MarketPriceDiv2>
+              <MarketPrice>Market Price</MarketPrice>
+            </MarketPriceDiv2>
+            <MarketPriceSpan>{this.state.currentPrice}</MarketPriceSpan>
+          </MarketPriceDiv1>
+        </MarketPriceRow>
+        <EstimatedCostRow>
+          <EstimatedCostLabel>
+            <ECDiv1>Estimated Cost</ECDiv1>
+            <ECDiv2>{this.state.estimatedCost}</ECDiv2>
+          </EstimatedCostLabel>
+        </EstimatedCostRow>
         </MainBodyDiv>
         <ButtonDiv>
           <ButtonDiv2>
