@@ -1,7 +1,16 @@
 const mongoose = require('mongoose');
 
 // get current date and time string
-function getDateAndTime() {
+function getDate() {
+  // get current date
+  const date = new Date();
+  // set date to string
+  const dateStr = date.toDateString();
+  // return date string
+  return dateStr;
+}
+
+function getTime() {
   // get current date
   const date = new Date();
   // set date to string
@@ -9,7 +18,7 @@ function getDateAndTime() {
   // get current time as string
   const time = date.toLocaleTimeString();
   // return full string
-  return `${dateStr}${' '}${time}`;
+  return time;
 }
 
 // define transaction schema
@@ -37,6 +46,10 @@ const transactionSchema = new mongoose.Schema({
   date: {
     type: String,
     required: [true, 'date field is required'],
+  },
+  time: {
+    type: String,
+    required: [true, 'time field is required'],
   },
   quantity: {
     type: Number,
@@ -75,7 +88,8 @@ const newTransaction = (transaction, cb) => {
     currentPrice: transaction.currentPrice,
     orderType: 'market',
     timeInForce: 'GFD',
-    date: getDateAndTime(),
+    date: getDate(),
+    time: getTime(),
     quantity: transaction.quantity,
     status: 'pending',
     filled: 'TBD',
