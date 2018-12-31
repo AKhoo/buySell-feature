@@ -81,10 +81,11 @@ class BuySell extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        stockName: '',
-        stockTicker: '',
-        currentPrice: '',
-        shares: ''
+        stockName: props.stock.stockName,
+        stockTicker: props.stock.stockTicker,
+        currentPrice: props.stock.currentPrice,
+        shares: 0,
+        estimatedCost: 0
       }
       this.buyStock = this.buyStock.bind(this);
       this.handleChange = this.handleChange.bind(this);
@@ -92,8 +93,10 @@ class BuySell extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
+    var cost = (e.target.value * this.state.currentPrice)
     this.setState({
-      shares: e.target.value
+      shares: e.target.value,
+      estimatedCost: cost
     })
   }
 
@@ -120,7 +123,7 @@ class BuySell extends React.Component {
     <Form onSubmit={this.buyStock}>
       <Header>
         <TitleHeader>
-          Buy FB
+          Buy {this.state.stockTicker}
         </TitleHeader>
       </Header>
         <BodyLabel>
@@ -130,11 +133,12 @@ class BuySell extends React.Component {
         </BodyLabel>
         <BodyLabel>
           <BodyDiv>Market Price
-          $132.41</BodyDiv>
+          {this.state.currentPrice}</BodyDiv>
         </BodyLabel>
         <BodyLabel>
           <BodyDiv>Estimated Cost
-          $132.41</BodyDiv>
+            {this.state.estimatedCost}
+          </BodyDiv>
         </BodyLabel>
         <Button onClick={this.buyStock}>BUY</Button>
     </Form>

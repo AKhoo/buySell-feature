@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Transaction = require('./Transaction.js');
-const Stock = require('./Stock.js');
+const Transaction = require('./transaction.js');
+const Stock = require('./stock.js');
 
 // connect to mongo via localhost
 const connection = mongoose.connect('mongodb://localhost/robinsHood', {

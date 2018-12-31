@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db = require('../database/index.js');
-const transactions = require('../database/Transaction.js');
-const stocks = require('../database/Stock.js');
+const transactions = require('../database/transaction.js');
+const stocks = require('../database/stock.js');
 const port = 3333;
 
 app.use(express.static('public'));

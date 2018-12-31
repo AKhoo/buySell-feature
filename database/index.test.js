@@ -1,6 +1,6 @@
 const Schema = require('./index.js');
-const transactions = require('./Transaction.js');
-const stocks = require('./Stock.js');
+const transactions = require('./transaction.js');
+const stocks = require('./stock.js');
 
 it('returns at least 3000 stocks once database is seeded', () => {
   stocks.loadAllStocks((err, data) => {
