@@ -10,7 +10,6 @@ display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
 font-weight: 400;
-height: 145px;
 letter-spacing: 0.25px;
 line-height: 19px;
 margin-bottom: 60px;
@@ -20,7 +19,6 @@ transition-delay: 0s;
 transition-duration: 0.3s;
 transition-property: background;
 transition-timing-function: ease;
-width: 678.656px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 `;
@@ -49,14 +47,12 @@ display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
 font-weight: 400;
-height: 30px;
 letter-spacing: 0.25px;
 line-height: 19px;
 margin-bottom: 24px;
 padding-bottom: 0px;
 text-align: left;
 text-size-adjust: 100%;
-width: 678.656px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -69,13 +65,11 @@ display: flex;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 13px;
 font-weight: 400;
-height: 30px;
 justify-content: space-between;
 letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
 text-size-adjust: 100%;
-width: 678.656px;
 -webkit-box-align: baseline;
 -webkit-box-direction: normal;
 -webkit-box-pack: justify;
@@ -89,7 +83,6 @@ display: block;
 font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
 font-size: 26px;
 font-weight: 500;
-height: 30px;
 letter-spacing: -0.14px;
 line-height: 30px;
 margin-block-end: 0px;
@@ -102,144 +95,53 @@ margin-right: 0px;
 margin-top: 0px;
 text-align: left;
 text-size-adjust: 100%;
-width: 82.9375px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Div1 = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-333px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-678.656px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Div2 = styled.div`
-background-color:
-rgb(27, 27, 29)
-;
-border-bottom-left-radius:
-4px
-;
-border-bottom-right-radius:
-4px
-;
-border-top-left-radius:
-4px
-;
-border-top-right-radius:
-4px
-;
-box-shadow:
-rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(0, 0, 0, 0.6) 0px 3px 24px 0px
-;
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-333px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-bottom:
-12px
-;
-margin-left:
--24px
-;
-margin-right:
--24px
-;
-margin-top:
-0px
-;
-position:
-relative
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-transition-delay:
-0s, 0s, 0s, 0s
-;
-transition-duration:
-0.15s, 0.15s, 0.15s, 0.15s
-;
-transition-property:
-background, box-shadow, margin-bottom, -webkit-box-shadow
-;
-transition-timing-function:
-ease, ease, ease, ease
-;
-width:
-726.656px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
+background-color: rgb(27, 27, 29);
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(0, 0, 0, 0.6) 0px 3px 24px 0px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 12px;
+margin-left: -24px;
+margin-right: -24px;
+margin-top: 0px;
+position: relative;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s, 0s, 0s, 0s;
+transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+transition-property: background, box-shadow, margin-bottom, -webkit-box-shadow;
+transition-timing-function: ease, ease, ease, ease;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 class History extends React.Component {
