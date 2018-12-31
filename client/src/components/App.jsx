@@ -175,6 +175,28 @@ text-size-adjust: 100%;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
+const SideBarDiv = styled.div`
+align-items: center;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: flex;
+flex-direction: column;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+position: fixed;
+text-align: left;
+text-size-adjust: 100%;
+top: 95px;
+-webkit-box-align: center;
+-webkit-box-direction: normal;
+-webkit-box-orient: vertical;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -220,7 +242,9 @@ class App extends React.Component {
                 <History transactions={this.state.transactions}/>
                 </ColL>
                 <ColR>
+                <SideBarDiv>
                 <BuySell stock={this.state.stock}/>
+                </SideBarDiv>
                 </ColR>
               </Row>
             </MainContainer>

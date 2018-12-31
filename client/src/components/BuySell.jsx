@@ -3,49 +3,223 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const Form = styled.form`
-  display: flex;
-  -webkit-box-orient: vertical;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  min-height: 100vh;
-  position: relative;
-  z-index: 0;
-  width: 275.77px;
-  height: 488px
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  text-align: left;
-  border: 1px solid #ddd;
-  padding-top: 0px;
-  padding-bottom: 90px;
-  color: black;
-  background: #1b1b1d;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+background-color: rgb(255, 255, 255);
+border-bottom-color: rgb(244, 244, 245);
+border-bottom-left-radius: 2px;
+border-bottom-right-radius: 2px;
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(244, 244, 245);
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: rgb(244, 244, 245);
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: rgb(244, 244, 245);
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+border-top-style: none;
+border-top-width: 0px;
+box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 24px;
+padding-right: 24px;
+padding-top: 0px;
+position: relative;
+text-align: left;
+text-size-adjust: 100%;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const Header = styled.h2`
-  width: 275.77px;
-  height: 52px
-  margin-top: 40px;
-  margin-bottom: 70px;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 19px;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #fff;
-  background-color: #1b1b1d;
+const Header = styled.header`
+align-items: center;
+border-bottom-color: rgb(244, 244, 245);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-left-color: rgb(244, 244, 245);
+border-right-color: rgb(244, 244, 245);
+border-top-color: rgb(244, 244, 245);
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: flex;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 52px;
+justify-content: space-between;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+margin-left: -24px;
+margin-right: -24px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 24px;
+padding-right: 24px;
+padding-top: 4px;
+text-align: left;
+text-size-adjust: 100%;
+width: 275.766px;
+-webkit-box-align: center;
+-webkit-box-direction: normal;
+-webkit-box-pack: justify;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const TitleHeader = styled.div`
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 19px;
-  font-family: "DIN Pro", -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #fff;
-  background-color: #1b1b1d;
+align-items: center;
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: flex;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 47px;
+letter-spacing: 0.25px;
+line-height: 19px;
+position: relative;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s;
+transition-duration: 0.25s;
+transition-property: border-color;
+transition-timing-function: ease;
+width: 227.766px;
+-webkit-box-align: center;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const BuySellDiv = styled.div`
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 47px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+width: 114.828px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const BuySellDiv2 = styled.div`
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: flex;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 47px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+width: 114.828px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const BuyDiv = styled.div`
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 47px;
+letter-spacing: 0.25px;
+line-height: 19px;
+overflow-x: hidden;
+overflow-y: hidden;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s, 0s;
+transition-duration: 0.25s, 0.25s;
+transition-property: margin-right, opacity;
+transition-timing-function: ease, ease;
+white-space: nowrap;
+width: 63px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const BuyDiv2 = styled.div`
+box-sizing: border-box;
+color: rgb(23, 23, 24);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 47px;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s;
+transition-duration: 0.25s;
+transition-property: width;
+transition-timing-function: ease;
+white-space: nowrap;
+width: 63px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const Buy = styled.h3`
+border-bottom-color: rgb(244, 85, 49);
+border-bottom-style: solid;
+border-bottom-width: 2px;
+border-left-color: rgb(244, 85, 49);
+border-right-color: rgb(244, 85, 49);
+border-top-color: rgb(244, 85, 49);
+box-sizing: border-box;
+color: rgb(244, 85, 49);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 16px;
+font-weight: 500;
+height: 47px;
+letter-spacing: normal;
+line-height: 22px;
+margin-block-end: 0px;
+margin-block-start: 0px;
+margin-bottom: 0px;
+margin-inline-end: 12px;
+margin-inline-start: 0px;
+margin-left: 0px;
+margin-right: 12px;
+margin-top: 0px;
+padding-top: 12px;
+text-align: left;
+text-size-adjust: 100%;
+transition-delay: 0s, 0s;
+transition-duration: 0.25s, 0.25s;
+transition-property: border-color, color;
+transition-timing-function: ease, ease;
+white-space: nowrap;
+width: 51px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
 const Body = styled.div`
@@ -122,10 +296,17 @@ class BuySell extends React.Component {
     <Form>
       <Header>
         <TitleHeader>
-          Buy {this.state.stockTicker}
-        </TitleHeader>
-        <TitleHeader>
-          Sell {this.state.stockTicker}
+          <BuySellDiv>
+            <BuySellDiv2>
+              <BuyDiv>
+                <BuyDiv2>
+                  <Buy>
+                  Buy {this.state.stockTicker}
+                  </Buy>
+                </BuyDiv2>
+              </BuyDiv>
+            </BuySellDiv2>
+          </BuySellDiv>
         </TitleHeader>
       </Header>
       <Body>
