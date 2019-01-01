@@ -1107,16 +1107,30 @@ class BuySell extends React.Component {
         orderDescription: 'Estimated Cost',
         userShares: 103,
         userBalance: 246.42,
-        sharesBalance: ``
+        sharesBalance: ``,
+        borderTopColor: '',
+        borderBottomColor: '',
+        borderLeftColor: '',
+        borderRightColor: ''
       }
       this.buyStock = this.buyStock.bind(this);
       this.handleChange = this.handleChange.bind(this);
       this.buySellClick = this.buySellClick.bind(this);
+      this.sharesClick = this.sharesClick.bind(this);
   }
 
   componentDidMount() {
     this.setState({
-      sharesBalance: `${this.state.userBalance} Buying Power Available`
+      sharesBalance: `${this.state.userBalance} Buying Power Available`,
+    })
+  }
+
+  sharesClick(e) {
+    this.setState({
+      borderTopColor: 'rgb(33, 206, 153)',
+      borderBottomColor: 'rgb(33, 206, 153)',
+      borderLeftColor: 'rgb(33, 206, 153)',
+      borderRightColor: 'rgb(33, 206, 153)'
     })
   }
 
@@ -1192,7 +1206,7 @@ class BuySell extends React.Component {
           <Label>
             <Shares>Shares</Shares>
             <SharesInputDiv>
-              <SharesInput onChange={this.handleChange}></SharesInput>
+              <SharesInput style={{borderTopColor: this.state.borderTopColor, borderBottomColor: this.state.borderBottomColor, borderLeftColor: this.state.borderLeftColor, borderRightColor: this.state.borderRightColor}} placeholder='0' onChange={this.handleChange} onClick={this.sharesClick}></SharesInput>
             </SharesInputDiv>
           </Label>
         </FormGroup>
