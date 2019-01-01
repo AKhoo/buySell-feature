@@ -1118,11 +1118,21 @@ class BuySell extends React.Component {
       this.buySellClick = this.buySellClick.bind(this);
       this.sharesClick = this.sharesClick.bind(this);
       this.sharesBlur = this.sharesBlur.bind(this);
+      this.sharesHover = this.sharesHover.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       sharesBalance: `${this.state.userBalance} Buying Power Available`,
+    })
+  }
+
+  sharesHover() {
+    this.setState({
+      borderTopColor: 'rgb(132, 132, 134)',
+      borderBottomColor: 'rgb(132, 132, 134)',
+      borderLeftColor: 'rgb(132, 132, 134)',
+      borderRightColor: 'rgb(132, 132, 134)'
     })
   }
 
@@ -1216,7 +1226,7 @@ class BuySell extends React.Component {
           <Label>
             <Shares>Shares</Shares>
             <SharesInputDiv>
-              <SharesInput style={{borderTopColor: this.state.borderTopColor, borderBottomColor: this.state.borderBottomColor, borderLeftColor: this.state.borderLeftColor, borderRightColor: this.state.borderRightColor}} placeholder='0' onChange={this.handleChange} onClick={this.sharesClick} onBlur={this.sharesBlur}></SharesInput>
+              <SharesInput style={{borderTopColor: this.state.borderTopColor, borderBottomColor: this.state.borderBottomColor, borderLeftColor: this.state.borderLeftColor, borderRightColor: this.state.borderRightColor}} placeholder='0' onChange={this.handleChange} onClick={this.sharesClick} onBlur={this.sharesBlur} onMouseOver={this.sharesHover}></SharesInput>
             </SharesInputDiv>
           </Label>
         </FormGroup>
