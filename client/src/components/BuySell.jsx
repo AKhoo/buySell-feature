@@ -1117,6 +1117,7 @@ class BuySell extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.buySellClick = this.buySellClick.bind(this);
       this.sharesClick = this.sharesClick.bind(this);
+      this.sharesBlur = this.sharesBlur.bind(this);
   }
 
   componentDidMount() {
@@ -1131,6 +1132,15 @@ class BuySell extends React.Component {
       borderBottomColor: 'rgb(33, 206, 153)',
       borderLeftColor: 'rgb(33, 206, 153)',
       borderRightColor: 'rgb(33, 206, 153)'
+    })
+  }
+
+  sharesBlur() {
+    this.setState({
+      borderTopColor: 'rgb(23, 23, 24)',
+      borderBottomColor: 'rgb(23, 23, 24)',
+      borderLeftColor: 'rgb(23, 23, 24)',
+      borderRightColor: 'rgb(23, 23, 24)'
     })
   }
 
@@ -1206,7 +1216,7 @@ class BuySell extends React.Component {
           <Label>
             <Shares>Shares</Shares>
             <SharesInputDiv>
-              <SharesInput style={{borderTopColor: this.state.borderTopColor, borderBottomColor: this.state.borderBottomColor, borderLeftColor: this.state.borderLeftColor, borderRightColor: this.state.borderRightColor}} placeholder='0' onChange={this.handleChange} onClick={this.sharesClick}></SharesInput>
+              <SharesInput style={{borderTopColor: this.state.borderTopColor, borderBottomColor: this.state.borderBottomColor, borderLeftColor: this.state.borderLeftColor, borderRightColor: this.state.borderRightColor}} placeholder='0' onChange={this.handleChange} onClick={this.sharesClick} onBlur={this.sharesBlur}></SharesInput>
             </SharesInputDiv>
           </Label>
         </FormGroup>
