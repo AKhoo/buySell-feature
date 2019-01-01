@@ -4,7 +4,7 @@ import History from './History.jsx';
 import axios from 'axios';
 import styled from 'styled-components';
 
-const Body = styled.body`
+const Body = styled.div`
 background-attachment: scroll;
 background-clip: border-box;
 background-color: rgb(27, 27, 29);

@@ -223,6 +223,9 @@ white-space: nowrap;
 width: 70.2812px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+&:hover {
+  color: rgb(33, 206, 153);
+}
 `;
 
 const SellDiv = styled.div`
@@ -304,6 +307,9 @@ white-space: nowrap;
 width: 71.1094px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+&:hover {
+  color: rgb(33, 206, 153);
+}
 `;
 
 const Body = styled.div`
@@ -876,6 +882,12 @@ writing-mode: horizontal-tb;
 -webkit-rtl-ordering: logical;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 -webkit-border-image: none;
+&:hover {
+  border-top-color: rgb(132, 132, 134);
+  border-bottom-color: rgb(132, 132, 134);
+  border-left-color: rgb(132, 132, 134);
+  border-right-color: rgb(132, 132, 134);
+}
 `;
 
 const MarketPriceRow = styled.div`
@@ -1091,10 +1103,36 @@ class BuySell extends React.Component {
         stockTicker: props.stock.stockTicker,
         currentPrice: props.stock.currentPrice,
         shares: 0,
-        estimatedCost: 0
+        estimatedCost: 0,
+        orderDescription: 'Estimated Cost',
+        userShares: 103,
+        userBalance: 246.42,
+        sharesBalance: ``
       }
       this.buyStock = this.buyStock.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.buySellClick = this.buySellClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      sharesBalance: `${this.state.userBalance} Buying Power Available`
+    })
+  }
+
+  buySellClick(e) {
+    console.log('CLICK!!!!', e.target.id)
+    if (e.target.id === 'sell') {
+      this.setState({
+        orderDescription: 'Estimated Credit',
+        sharesBalance: `${this.state.userShares} Shares Available`
+      })
+    } else {
+      this.setState({
+        orderDescription: 'Estimated Cost',
+        sharesBalance: `${this.state.userBalance} Buying Power Available`
+      })
+    }
   }
 
   handleChange(e) {
@@ -1132,14 +1170,14 @@ class BuySell extends React.Component {
             <BuySellDiv2>
               <BuyDiv>
                 <BuyDiv2>
-                  <Buy>
+                  <Buy id='buy' onClick={this.buySellClick}>
                   Buy {this.state.stockTicker}
                   </Buy>
                 </BuyDiv2>
               </BuyDiv>
               <SellDiv>
                 <SellDiv2>
-                  <Sell>
+                  <Sell id='sell' onClick={this.buySellClick}>
                   Sell {this.state.stockTicker}
                   </Sell>
                 </SellDiv2>
@@ -1168,7 +1206,7 @@ class BuySell extends React.Component {
         </MarketPriceRow>
         <EstimatedCostRow>
           <EstimatedCostLabel>
-            <ECDiv1>Estimated Cost</ECDiv1>
+            <ECDiv1>{this.state.orderDescription}</ECDiv1>
             <ECDiv2>{this.state.estimatedCost}</ECDiv2>
           </EstimatedCostLabel>
         </EstimatedCostRow>
@@ -1189,12 +1227,11 @@ class BuySell extends React.Component {
         <ButtonDiv>
           <ButtonDiv2>
             <ButtonDiv3>
-            <Button onClick={this.buyStock}>BUY</Button>
+            <Button onClick={this.buyStock}>Review Order</Button>
             </ButtonDiv3>
           </ButtonDiv2>
         </ButtonDiv>
-        <BuyingPowerDiv>$95.42
-          Buying Power Available
+        <BuyingPowerDiv>{this.state.sharesBalance}
         </BuyingPowerDiv>
       </Body>
     </Form>
