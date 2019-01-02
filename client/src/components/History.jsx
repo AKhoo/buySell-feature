@@ -114,36 +114,6 @@ text-size-adjust: 100%;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const Div2 = styled.div`
-background-color: rgb(27, 27, 29);
-border-bottom-left-radius: 4px;
-border-bottom-right-radius: 4px;
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
-box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(0, 0, 0, 0.6) 0px 3px 24px 0px;
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-letter-spacing: 0.25px;
-line-height: 19px;
-margin-bottom: 12px;
-margin-left: -24px;
-margin-right: -24px;
-margin-top: 0px;
-position: relative;
-text-align: left;
-text-size-adjust: 100%;
-transition-delay: 0s, 0s, 0s, 0s;
-transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
-transition-property: background, box-shadow, margin-bottom, -webkit-box-shadow;
-transition-timing-function: ease, ease, ease, ease;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
 class History extends React.Component {
   constructor(props) {
     super(props);
@@ -156,14 +126,12 @@ class History extends React.Component {
     return (
      <div>
        <Section>
-         <Header><HeaderDiv><H2>History</H2></HeaderDiv></Header>
-       <Div1>
-         <Div2>
-           {this.props.transactions.map((tx, i) => {
-            return <Transaction key={i} tx={tx} />
-          })}
-         </Div2>
-       </Div1>
+        <Header><HeaderDiv><H2>History</H2></HeaderDiv></Header>
+          <Div1>
+            {this.props.transactions.map((tx, i) => {
+              return <Transaction key={i} tx={tx} />
+            })}
+          </Div1>
        </Section>
      </div>
     )
