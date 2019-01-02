@@ -45,8 +45,10 @@ app.post('/transactions', (req, res) => {
     stockTicker: req.body.stockTicker,
     currentPrice: req.body.currentPrice,
     quantity: req.body.quantity,
+    orderType: req.body.orderType,
   };
 
+  console.log('TXXXXXX', transaction);
   transactions.newTransaction(transaction, (err, data) => {
     if (err) {
       res.json({ message: "ooo, guess you missed that trade... hope it wasn't important!" });

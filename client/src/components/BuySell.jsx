@@ -1192,11 +1192,15 @@ class BuySell extends React.Component {
   }
 
   buyStock(e) {
+
+    const orderType = this.state.isSelectedBuy ? 'Market Buy' : 'Market Sell'
+    console.log('ORDER TYPE', orderType);
     const transaction = {
       stockName: this.state.stockName,
       stockTicker: this.state.stockTicker,
       currentPrice: this.state.currentPrice,
       quantity: this.state.shares,
+      orderType: orderType
     };
     if (this.state.shares !== 0){
       axios.post('/transactions', transaction)

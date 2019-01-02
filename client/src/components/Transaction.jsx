@@ -234,12 +234,12 @@ export default function Transaction (props) {
           <TxDivSmall2>
             <TxDivSmall3>
                <TxDivSmall4>
-                <H31>Market Buy</H31>
+                <H31>{props.tx.orderType}</H31>
                 {props.tx.date}
                </TxDivSmall4>
                <Div7>
-                <H32>{props.tx.currentPrice}</H32>
-                <Span1>{props.tx.quantity} shares at {props.tx.currentPrice}</Span1>
+                <H32>{props.tx.status}</H32>
+                <Span1></Span1>
                </Div7>
             </TxDivSmall3>
             <Div5></Div5>
