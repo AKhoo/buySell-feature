@@ -48,7 +48,6 @@ app.post('/transactions', (req, res) => {
     orderType: req.body.orderType,
   };
 
-  console.log('TXXXXXX', transaction);
   transactions.newTransaction(transaction, (err, data) => {
     if (err) {
       res.json({ message: "ooo, guess you missed that trade... hope it wasn't important!" });
