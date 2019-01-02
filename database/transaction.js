@@ -87,7 +87,7 @@ const newTransaction = (transaction, cb) => {
     stockTicker: transaction.stockTicker,
     currentPrice: transaction.currentPrice,
     orderType: transaction.orderType,
-    timeInForce: 'GFD',
+    timeInForce: 'Good for day',
     date: getDate(),
     time: getTime(),
     quantity: transaction.quantity,

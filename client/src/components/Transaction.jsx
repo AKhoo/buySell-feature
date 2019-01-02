@@ -538,7 +538,7 @@ export default class Transaction extends React.Component {
               </TxStockInfoDiv>
               <TxStockInfoDiv>
                 <TxSILabelDiv>Type</TxSILabelDiv>
-                <TxSINameDiv>{this.props.tx.oderType}</TxSINameDiv>
+                <TxSINameDiv>{this.props.tx.orderType}</TxSINameDiv>
               </TxStockInfoDiv>
               <TxStockInfoDiv>
                 <TxSILabelDiv>Time in Force</TxSILabelDiv>
@@ -578,7 +578,7 @@ export default class Transaction extends React.Component {
               </TxStockInfoDiv>
               <TxStockInfoDiv>
                 <TxSILabelDiv>Type</TxSILabelDiv>
-                <TxSINameDiv>{this.props.tx.oderType}</TxSINameDiv>
+                <TxSINameDiv>{this.props.tx.orderType}</TxSINameDiv>
               </TxStockInfoDiv>
               <TxStockInfoDiv>
                 <TxSILabelDiv>Time in Force</TxSILabelDiv>
