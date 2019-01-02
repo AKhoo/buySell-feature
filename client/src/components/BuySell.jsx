@@ -188,7 +188,7 @@ width: 82.2812px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const Buy = styled.h3`
+const BuySellSelected = styled.h3`
 border-bottom-color: rgb(33, 206, 153);
 border-bottom-style: solid;
 border-bottom-width: 2px;
@@ -274,7 +274,7 @@ width: 71.1094px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const Sell = styled.h3`
+const BuySellUnselected = styled.h3`
 border-bottom-color: rgba(0, 0, 0, 0);
 border-bottom-style: solid;
 border-bottom-width: 2px;
@@ -1111,7 +1111,14 @@ class BuySell extends React.Component {
         borderTopColor: '',
         borderBottomColor: '',
         borderLeftColor: '',
-        borderRightColor: ''
+        borderRightColor: '',
+        clickBorderBottomColor: '',
+        color: '',
+        marginInlineEnd: '',
+        marginRight: '',
+        width: '',
+        isSelectedBuy: true,
+        isSelectedSell: false
       }
       this.buyStock = this.buyStock.bind(this);
       this.handleChange = this.handleChange.bind(this);
@@ -1124,6 +1131,8 @@ class BuySell extends React.Component {
   componentDidMount() {
     this.setState({
       sharesBalance: `${this.state.userBalance} Buying Power Available`,
+      isSelectedBuy: true,
+      isSelectedSell: false
     })
   }
 
@@ -1155,16 +1164,20 @@ class BuySell extends React.Component {
   }
 
   buySellClick(e) {
-    console.log('CLICK!!!!', e.target.id)
+    console.log('CLICK!!!!', e.target.id, 'BUY', this.state.isSelectedBuy, 'SELL', this.state.isSelectedSell)
     if (e.target.id === 'sell') {
       this.setState({
         orderDescription: 'Estimated Credit',
-        sharesBalance: `${this.state.userShares} Shares Available`
+        sharesBalance: `${this.state.userShares} Shares Available`,
+        isSelectedBuy: false,
+        isSelectedSell: true
       })
     } else {
       this.setState({
         orderDescription: 'Estimated Cost',
-        sharesBalance: `${this.state.userBalance} Buying Power Available`
+        sharesBalance: `${this.state.userBalance} Buying Power Available`,
+        isSelectedBuy: true,
+        isSelectedSell: false
       })
     }
   }
@@ -1196,24 +1209,34 @@ class BuySell extends React.Component {
   }
 
   render() {
+      const highlightedBuy = this.state.isSelectedBuy ?
+        <BuySellSelected style={{borderBottomColor: this.state.clickBorderBottomColor, color: this.state.color, marginInlineEnd: this.state.marginInlineEnd, marginRight: this.state.marginRight, width: this.state.width}} id='buy' onClick={this.buySellClick}>
+        Buy {this.state.stockTicker}
+        </BuySellSelected> :
+        <BuySellUnselected style={{borderBottomColor: this.state.clickBorderBottomColor, color: this.state.color, marginInlineEnd: this.state.marginInlineEnd, marginRight: this.state.marginRight, width: this.state.width}} id='buy' onClick={this.buySellClick}>
+        Buy {this.state.stockTicker}
+        </BuySellUnselected>
+      const highlightedSell = this.state.isSelectedSell ?
+        <BuySellSelected style={{borderBottomColor: this.state.clickBorderBottomColor, color: this.state.color, marginInlineEnd: this.state.marginInlineEnd, marginRight: this.state.marginRight, width: this.state.width}} id='sell' onClick={this.buySellClick}>
+        Sell {this.state.stockTicker}
+        </BuySellSelected> :
+        <BuySellUnselected style={{borderBottomColor: this.state.clickBorderBottomColor, color: this.state.color, marginInlineEnd: this.state.marginInlineEnd, marginRight: this.state.marginRight, width: this.state.width}} id='sell' onClick={this.buySellClick}>
+        Sell {this.state.stockTicker}
+        </BuySellUnselected>
     return (
     <Form>
       <Header>
         <TitleHeader>
           <BuySellDiv>
-            <BuySellDiv2>
+            <BuySellDiv2 onClick={this.parentClick}>
               <BuyDiv>
                 <BuyDiv2>
-                  <Buy id='buy' onClick={this.buySellClick}>
-                  Buy {this.state.stockTicker}
-                  </Buy>
+                  {highlightedBuy}
                 </BuyDiv2>
               </BuyDiv>
               <SellDiv>
                 <SellDiv2>
-                  <Sell id='sell' onClick={this.buySellClick}>
-                  Sell {this.state.stockTicker}
-                  </Sell>
+                  {highlightedSell}
                 </SellDiv2>
               </SellDiv>
             </BuySellDiv2>
