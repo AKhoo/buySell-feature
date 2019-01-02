@@ -408,262 +408,100 @@ width: 218.203px;
 `;
 
 const TxSILabelDiv = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-500
-;
-height:
-19px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-bottom:
-0px
-;
-margin-top:
-0px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-218.203px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 500;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+margin-top: 0px;
+text-align: left;
+text-size-adjust: 100%;
+width: 218.203px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const TxSINameDiv = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-19px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-bottom:
-0px
-;
-margin-top:
-0px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-218.203px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+margin-top: 0px;
+text-align: left;
+text-size-adjust: 100%;
+width: 218.203px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CancelDiv = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-19px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-top:
-12px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-678.656px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-top: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 678.656px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CancelDiv2 = styled.div`
-box-sizing:
-border-box
-;
-color:
-rgb(255, 255, 255)
-;
-display:
-block
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-400
-;
-height:
-19px
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-margin-bottom:
-12px
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-width:
-678.656px
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 678.656px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 const CancelA = styled.a`
-background-color:
-rgba(0, 0, 0, 0)
-;
-box-sizing:
-border-box
-;
-color:
-rgb(33, 206, 153)
-;
-cursor:
-pointer
-;
-display:
-inline
-;
-font-family:
-"DIN Pro", -apple-system, system-ui, sans-serif
-;
-font-size:
-13px
-;
-font-weight:
-500
-;
-height:
-auto
-;
-letter-spacing:
-0.25px
-;
-line-height:
-19px
-;
-text-align:
-left
-;
-text-decoration-color:
-rgb(33, 206, 153)
-;
-text-decoration-line:
-none
-;
-text-decoration-style:
-solid
-;
-text-size-adjust:
-100%
-;
-width:
-auto
-;
--webkit-box-direction:
-normal
-;
--webkit-tap-highlight-color:
-rgba(0, 0, 0, 0)
-;
-` ;
+background-color: rgba(0, 0, 0, 0);
+box-sizing: border-box;
+color: rgb(33, 206, 153);
+cursor: pointer;
+display: inline;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 500;
+height: auto;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-decoration-color: rgb(33, 206, 153);
+text-decoration-line: none;
+text-decoration-style: solid;
+text-size-adjust: 100%;
+width: auto;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
 
 export default class Transaction extends React.Component {
   constructor(props) {
