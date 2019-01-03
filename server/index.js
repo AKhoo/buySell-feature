@@ -2,18 +2,39 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db = require('../database/index.js');
-const transactions = require('../database/Transaction.js');
-const stocks = require('../database/Stock.js');
+const transactions = require('../database/transaction.js');
+const stocks = require('../database/stock.js');
 const port = 3333;
 
-app.use(express.static('public'));
+app.use('/', express.static('./public'));
+app.use(/\/\d+\//, express.static('./public'));
+
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {
-  console.log('PARAMMMMSSSSSS', req.params);
   stocks.getStock(req.params.stockTicker, (err, data) => {
     if (err) {
       res.json({ message: "what's a stock?" });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+app.get('/stocks', (req, res) => {
+  stocks.loadAllStocks((err, data) => {
+    if (err) {
+      res.json({ message: 'The market is no more' });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+app.get('/transactions', (req, res) => {
+  transactions.loadAll((err, data) => {
+    if (err) {
+      res.json({ message: "Who knows what you've been up to!" });
     } else {
       res.json(data);
     }
@@ -26,6 +47,7 @@ app.post('/transactions', (req, res) => {
     stockTicker: req.body.stockTicker,
     currentPrice: req.body.currentPrice,
     quantity: req.body.quantity,
+    orderType: req.body.orderType,
   };
 
   transactions.newTransaction(transaction, (err, data) => {
@@ -38,3 +60,5 @@ app.post('/transactions', (req, res) => {
 });
 
 app.listen(port, () => { console.log(`Listening on ${port} !!!`); });
+
+module.exports = app;

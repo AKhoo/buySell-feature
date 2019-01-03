@@ -1,9 +1,16 @@
 const mongoose = require('mongoose');
-const Schema = require('./index.js');
-const db = mongoose.connection;
 
 // get current date and time string
-function getDateAndTime() {
+function getDate() {
+  // get current date
+  const date = new Date();
+  // set date to string
+  const dateStr = date.toDateString();
+  // return date string
+  return dateStr;
+}
+
+function getTime() {
   // get current date
   const date = new Date();
   // set date to string
@@ -11,7 +18,7 @@ function getDateAndTime() {
   // get current time as string
   const time = date.toLocaleTimeString();
   // return full string
-  return `dateStr ${' '} time`;
+  return time;
 }
 
 // define transaction schema
@@ -40,6 +47,10 @@ const transactionSchema = new mongoose.Schema({
     type: String,
     required: [true, 'date field is required'],
   },
+  time: {
+    type: String,
+    required: [true, 'time field is required'],
+  },
   quantity: {
     type: Number,
     required: [true, 'quantity field is required'],
@@ -60,27 +71,32 @@ const transactionSchema = new mongoose.Schema({
 });
 
 // define Transaction model
-const Transaction = mongoose.model('Transaction', transactionSchema);
+const Transaction = mongoose.model('transaction', transactionSchema);
 
 
 // methods
+const loadAll = (cb) => {
+  Transaction.find({}).then((txs) => {
+    cb(null, txs);
+  });
+};
+
 const newTransaction = (transaction, cb) => {
-  const newTx = {
+  const newTx = new Transaction({
     stockName: transaction.stockName,
     stockTicker: transaction.stockTicker,
     currentPrice: transaction.currentPrice,
-    orderType: 'market',
-    timeInForce: 'GFD',
-    date: getDateAndTime(),
+    orderType: transaction.orderType,
+    timeInForce: 'Good for day',
+    date: getDate(),
+    time: getTime(),
     quantity: transaction.quantity,
-    status: 'pending',
+    status: 'Queued',
     filled: 'TBD',
     filledQuantity: 0,
     totalCost: 0.00,
-  };
-  console.log(newTx);
-  Transaction.update({ stockTicker: transaction.stockTicker }, newTx,
-    { upsert: true }).then((tx) => {
+  });
+  newTx.save().then((tx) => {
     cb(null, tx);
   });
 };
@@ -88,3 +104,4 @@ const newTransaction = (transaction, cb) => {
 // export
 module.exports = Transaction;
 module.exports.newTransaction = newTransaction;
+module.exports.loadAll = loadAll;
