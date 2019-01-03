@@ -1362,7 +1362,7 @@ class BuySell extends React.Component {
       orderType: orderType
     };
     if (this.state.shares !== 0){
-      axios.post('/transactions', transaction)
+      axios.post('http://localhost:3333/transactions', transaction)
       .then(function (response) {
       })
       .catch(function (error) {

@@ -214,7 +214,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/transactions').then(res => {
+    axios.get('http://localhost:3333/transactions').then(res => {
       this.setState({
         transactions: res.data
       })
