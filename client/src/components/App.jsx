@@ -211,6 +211,29 @@ class App extends React.Component {
       },
       transactions: []
     }
+    this.getStocks = this.getStocks.bind(this);
+  }
+
+  getStocks() {
+    axios.get('/stocks').then(res => {
+      const stocks = res.data;
+      var rand = stocks[Math.floor(Math.random() * stocks.length)];
+      console.log('STOCCCCCCKK', rand)
+      this.setState({
+        stock: {
+          _id: rand._id,
+          stockName: rand.stockName,
+          stockTicker: rand.stockTicker,
+          currentPrice: rand.currentPrice,
+          marketCap: rand.marketCap,
+          sector: rand.sector
+        },
+      })
+    })
+  }
+
+  componentWillMount() {
+    this.getStocks()
   }
 
   componentDidMount() {

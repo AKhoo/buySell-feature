@@ -1138,12 +1138,14 @@ class BuySell extends React.Component {
   }
 
   sharesHover() {
-    this.setState({
-      borderTopColor: 'rgb(132, 132, 134)',
-      borderBottomColor: 'rgb(132, 132, 134)',
-      borderLeftColor: 'rgb(132, 132, 134)',
-      borderRightColor: 'rgb(132, 132, 134)'
-    })
+    if (this.state.borderBottomColor !== 'rgb(33, 206, 153)'){
+      this.setState({
+        borderTopColor: 'rgb(132, 132, 134)',
+        borderBottomColor: 'rgb(132, 132, 134)',
+        borderLeftColor: 'rgb(132, 132, 134)',
+        borderRightColor: 'rgb(132, 132, 134)'
+      })
+    }
   }
 
   sharesLeaveHover() {
