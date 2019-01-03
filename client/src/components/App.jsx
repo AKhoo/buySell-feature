@@ -201,54 +201,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stock: {
-        _id: '5c1d6ac20d27ce00ee61d0f9',
-        stockName: 'Facebook, Inc.',
-        stockTicker: 'FB',
-        currentPrice: 193.09,
-        marketCap: 561082611151.32,
-        sector: 'Technology'
-      },
       transactions: []
     }
-    this.getStocks = this.getStocks.bind(this);
-  }
-
-  getStocks() {
-    axios.get('/stocks').then(res => {
-      const stocks = res.data;
-      var rand = stocks[Math.floor(Math.random() * stocks.length)];
-      console.log('STOCCCCCCKK', rand)
-      this.setState({
-        stock: {
-          _id: rand._id,
-          stockName: rand.stockName,
-          stockTicker: rand.stockTicker,
-          currentPrice: rand.currentPrice,
-          marketCap: rand.marketCap,
-          sector: rand.sector
-        },
-      })
-    })
   }
 
   componentWillMount() {
-    this.getStocks()
-  }
-
-  componentDidMount() {
     axios.get('/transactions').then(res => {
       this.setState({
         transactions: res.data
-      })
-    })
-  }
-
-  changeStock() {
-    axios.get('/stocks/:stockTicker').then(res => {
-      console.log('STOCCCCCCCK', res.data)
-      this.setState({
-        stock: res.data
       })
     })
   }
@@ -266,7 +226,7 @@ class App extends React.Component {
                 </ColL>
                 <ColR>
                 <SideBarDiv>
-                <BuySell stock={this.state.stock}/>
+                <BuySell />
                 </SideBarDiv>
                 </ColR>
               </Row>

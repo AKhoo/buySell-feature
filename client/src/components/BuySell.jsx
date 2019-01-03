@@ -1099,9 +1099,9 @@ class BuySell extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        stockName: props.stock.stockName,
-        stockTicker: props.stock.stockTicker,
-        currentPrice: props.stock.currentPrice,
+        stockName: '',
+        stockTicker: '',
+        currentPrice: 0,
         shares: 0,
         estimatedCost: 0,
         orderDescription: 'Estimated Cost',
@@ -1127,6 +1127,11 @@ class BuySell extends React.Component {
       this.sharesBlur = this.sharesBlur.bind(this);
       this.sharesHover = this.sharesHover.bind(this);
       this.sharesLeaveHover = this.sharesLeaveHover.bind(this);
+      this.changeStock = this.changeStock.bind(this);
+  }
+
+  componentWillMount() {
+    this.changeStock();
   }
 
   componentDidMount() {
@@ -1134,6 +1139,19 @@ class BuySell extends React.Component {
       sharesBalance: `${this.state.userBalance} Buying Power Available`,
       isSelectedBuy: true,
       isSelectedSell: false
+    })
+  }
+
+  changeStock() {
+    axios.get('/stocks').then(res => {
+      const stocks = res.data;
+      const rand = stocks[Math.floor(Math.random() * stocks.length)];
+      console.log('STOCCCCCCKK', rand)
+      this.setState({
+        stockName: rand.stockName,
+        stockTicker: rand.stockTicker,
+        currentPrice: rand.currentPrice,
+      })
     })
   }
 

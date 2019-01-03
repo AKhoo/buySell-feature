@@ -6,8 +6,8 @@ const transactions = require('../database/transaction.js');
 const stocks = require('../database/stock.js');
 const port = 3333;
 
-app.use('/', express.static('public'));
-// app.use(/\/\d+\//, express.static('public'));
+app.use('/', express.static('./public'));
+app.use(/\/\d+\//, express.static('./public'));
 
 app.use(bodyParser.json());
 
