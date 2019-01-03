@@ -385,7 +385,7 @@ width: 678.656px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const TxStockNameDiv = styled.div`
+const TxStockInfoDiv = styled.div`
 box-sizing: border-box;
 color: rgb(255, 255, 255);
 display: block;
@@ -403,6 +403,102 @@ margin-top: 0px;
 text-align: left;
 text-size-adjust: 100%;
 width: 218.203px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const TxSILabelDiv = styled.div`
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 500;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+margin-top: 0px;
+text-align: left;
+text-size-adjust: 100%;
+width: 218.203px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const TxSINameDiv = styled.div`
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 0px;
+margin-top: 0px;
+text-align: left;
+text-size-adjust: 100%;
+width: 218.203px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const CancelDiv = styled.div`
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-top: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 678.656px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const CancelDiv2 = styled.div`
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 400;
+height: 19px;
+letter-spacing: 0.25px;
+line-height: 19px;
+margin-bottom: 12px;
+text-align: left;
+text-size-adjust: 100%;
+width: 678.656px;
+-webkit-box-direction: normal;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;
+
+const CancelA = styled.a`
+background-color: rgba(0, 0, 0, 0);
+box-sizing: border-box;
+color: rgb(33, 206, 153);
+cursor: pointer;
+display: inline;
+font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
+font-size: 13px;
+font-weight: 500;
+height: auto;
+letter-spacing: 0.25px;
+line-height: 19px;
+text-align: left;
+text-decoration-color: rgb(33, 206, 153);
+text-decoration-line: none;
+text-decoration-style: solid;
+text-size-adjust: 100%;
+width: auto;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -432,31 +528,83 @@ export default class Transaction extends React.Component {
     const justDate = (this.props.tx.date).slice(3, this.props.tx.date.length)
     const txExpand = this.state.txOpen ?
     <TxBtmMainDivSelected>
-      <Div5>
+      <TxBorderDiv>
         <TxMainBodyDiv>
           <TxMainInfoDiv>
             <TxInfoDiv>
-              <TxStockNameDiv>
-
-              </TxStockNameDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Stock Name</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.stockName}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Type</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.orderType}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Time in Force</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.timeInForce}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Submitted</TxSILabelDiv>
+                <TxSINameDiv>{justDate}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Status</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.status}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Entered Quantity</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.quantity}</TxSINameDiv>
+              </TxStockInfoDiv>
             </TxInfoDiv>
           </TxMainInfoDiv>
+          <CancelDiv>
+            <CancelDiv2>
+              <CancelA>Cancel</CancelA>
+            </CancelDiv2>
+          </CancelDiv>
         </TxMainBodyDiv>
-      </Div5>
+      </TxBorderDiv>
     </TxBtmMainDivSelected>
      :
     <TxBtmMainDivUnselected>
-      <Div5>
+      <TxBorderDiv>
         <TxMainBodyDiv>
           <TxMainInfoDiv>
             <TxInfoDiv>
-              <TxStockNameDiv>
-
-              </TxStockNameDiv>
+            <TxStockInfoDiv>
+                <TxSILabelDiv>Stock Name</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.stockName}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Type</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.orderType}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Time in Force</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.timeInForce}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Submitted</TxSILabelDiv>
+                <TxSINameDiv>{justDate}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Status</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.status}</TxSINameDiv>
+              </TxStockInfoDiv>
+              <TxStockInfoDiv>
+                <TxSILabelDiv>Entered Quantity</TxSILabelDiv>
+                <TxSINameDiv>{this.props.tx.quantity}</TxSINameDiv>
+              </TxStockInfoDiv>
             </TxInfoDiv>
           </TxMainInfoDiv>
+          <CancelDiv>
+            <CancelDiv2>
+              <CancelA>Cancel</CancelA>
+            </CancelDiv2>
+          </CancelDiv>
         </TxMainBodyDiv>
-      </Div5>
+      </TxBorderDiv>
     </TxBtmMainDivUnselected>
     const txDivSmall1 = this.state.txOpen ?
     <TxDivSmall1Open>

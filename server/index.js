@@ -14,6 +14,10 @@ const allowCORS = (req, res, next) => {
 
 app.use(allowCORS);
 app.use(express.static('public'));
+
+app.use('/', express.static('./public'));
+app.use(/\/\d+\//, express.static('./public'));
+
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {
@@ -55,7 +59,6 @@ app.post('/transactions', (req, res) => {
     orderType: req.body.orderType,
   };
 
-  console.log('TXXXXXX', transaction);
   transactions.newTransaction(transaction, (err, data) => {
     if (err) {
       res.json({ message: "ooo, guess you missed that trade... hope it wasn't important!" });

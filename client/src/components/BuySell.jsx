@@ -120,7 +120,7 @@ letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
 text-size-adjust: 100%;
-width: 153.391px;
+width: 170px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -137,7 +137,7 @@ letter-spacing: 0.25px;
 line-height: 19px;
 text-align: left;
 text-size-adjust: 100%;
-width: 153.391px;
+width: 170px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -220,7 +220,7 @@ transition-duration: 0.25s, 0.25s;
 transition-property: border-color, color;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 70.2812px;
+width: 80px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 &:hover {
@@ -247,7 +247,7 @@ transition-duration: 0.25s, 0.25s;
 transition-property: margin-right, opacity;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 71.1094px;
+width: 80px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -269,7 +269,7 @@ transition-duration: 0.25s;
 transition-property: width;
 transition-timing-function: ease;
 white-space: nowrap;
-width: 71.1094px;
+width: 80px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
@@ -304,7 +304,7 @@ transition-duration: 0.25s, 0.25s;
 transition-property: border-color, color;
 transition-timing-function: ease, ease;
 white-space: nowrap;
-width: 71.1094px;
+width: 80px;
 -webkit-box-direction: normal;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 &:hover {
@@ -1091,153 +1091,6 @@ width: 45px;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const TxBtmMainDivUnselected = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 0px;
-letter-spacing: 0.25px;
-line-height: 19px;
-overflow-x: hidden;
-overflow-y: hidden;
-text-align: left;
-text-size-adjust: 100%;
-transition-delay: 0s;
-transition-duration: 0.3s;
-transition-property: height;
-transition-timing-function: ease;
-width: 678.656px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxBtmMainDivSelected = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 242px;
-letter-spacing: 0.25px;
-line-height: 19px;
-text-align: left;
-text-size-adjust: 100%;
-transition-delay: 0s;
-transition-duration: 0.3s;
-transition-property: height;
-transition-timing-function: ease;
-width: 678.656px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxBorderDiv = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: inline;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: auto;
-letter-spacing: 0.25px;
-line-height: 19px;
-text-align: left;
-text-size-adjust: 100%;
-width: auto;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxMainBodyDiv = styled.div`
-border-bottom-color: rgb(14, 13, 13);
-border-left-color: rgb(14, 13, 13);
-border-right-color: rgb(14, 13, 13);
-border-top-color: rgb(14, 13, 13);
-border-top-style: solid;
-border-top-width: 1px;
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 242px;
-letter-spacing: 0.25px;
-line-height: 19px;
-padding-bottom: 24px;
-text-align: left;
-text-size-adjust: 100%;
-transition-delay: 0s;
-transition-duration: 0.15s;
-transition-property: border-color;
-transition-timing-function: ease;
-width: 678.656px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxMainInfoDiv = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 174px;
-letter-spacing: 0.25px;
-line-height: 19px;
-padding-top: 24px;
-text-align: left;
-text-size-adjust: 100%;
-width: 678.656px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxInfoDiv = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: flex;
-flex-wrap: wrap;
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 150px;
-letter-spacing: 0.25px;
-line-height: 19px;
-text-align: left;
-text-size-adjust: 100%;
-width: 678.656px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
-const TxStockNameDiv = styled.div`
-box-sizing: border-box;
-color: rgb(255, 255, 255);
-display: block;
-flex-basis: calc(-8px + 33.3333%);
-font-family: "DIN Pro", -apple-system, system-ui, sans-serif;
-font-size: 13px;
-font-weight: 400;
-height: 38px;
-letter-spacing: 0.25px;
-line-height: 19px;
-margin-bottom: 12px;
-margin-left: 0px;
-margin-right: 6px;
-margin-top: 0px;
-text-align: left;
-text-size-adjust: 100%;
-width: 218.203px;
--webkit-box-direction: normal;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-`;
-
 const newOne = styled.div`
 
 `;
@@ -1246,9 +1099,9 @@ class BuySell extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        stockName: props.stock.stockName,
-        stockTicker: props.stock.stockTicker,
-        currentPrice: props.stock.currentPrice,
+        stockName: '',
+        stockTicker: '',
+        currentPrice: 0,
         shares: 0,
         estimatedCost: 0,
         orderDescription: 'Estimated Cost',
@@ -1274,6 +1127,11 @@ class BuySell extends React.Component {
       this.sharesBlur = this.sharesBlur.bind(this);
       this.sharesHover = this.sharesHover.bind(this);
       this.sharesLeaveHover = this.sharesLeaveHover.bind(this);
+      this.changeStock = this.changeStock.bind(this);
+  }
+
+  componentWillMount() {
+    this.changeStock();
   }
 
   componentDidMount() {
@@ -1284,13 +1142,34 @@ class BuySell extends React.Component {
     })
   }
 
-  sharesHover() {
-    this.setState({
-      borderTopColor: 'rgb(132, 132, 134)',
-      borderBottomColor: 'rgb(132, 132, 134)',
-      borderLeftColor: 'rgb(132, 132, 134)',
-      borderRightColor: 'rgb(132, 132, 134)'
+  changeStock() {
+    axios.get('/stocks').then(res => {
+      const stocks = res.data;
+      const id = parseInt(window.location.pathname.slice(1, window.location.pathname.length-1))
+      var urlStock = {}
+      for (var i=0; i < stocks.length; i++) {
+        if (stocks[i]._id === id) {
+            urlStock = stocks[i];
+        }
+      }
+      console.log('STOCCCCCCKK', urlStock, id)
+      this.setState({
+        stockName: urlStock.stockName,
+        stockTicker: urlStock.stockTicker,
+        currentPrice: urlStock.currentPrice,
+      })
     })
+  }
+
+  sharesHover() {
+    if (this.state.borderBottomColor !== 'rgb(33, 206, 153)'){
+      this.setState({
+        borderTopColor: 'rgb(132, 132, 134)',
+        borderBottomColor: 'rgb(132, 132, 134)',
+        borderLeftColor: 'rgb(132, 132, 134)',
+        borderRightColor: 'rgb(132, 132, 134)'
+      })
+    }
   }
 
   sharesLeaveHover() {

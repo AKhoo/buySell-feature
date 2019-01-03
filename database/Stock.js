@@ -5,6 +5,10 @@ const db = mongoose.connection;
 
 
 const stockSchema = new mongoose.Schema({
+  _id: {
+    type: Number,
+    required: [true, '_id field is required']
+  },
   stockTicker: {
     type: String,
     required: [true, 'stockTicker field is required'],
