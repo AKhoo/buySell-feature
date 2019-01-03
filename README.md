@@ -1,6 +1,6 @@
-# Project Name
+# Buy/Sell and History Component
 
-> Project description
+a recreation of the buy/Sell and History components from a securities page on Robinhood.com
 
 ## Related Projects
 
@@ -15,7 +15,6 @@
 
 ## Usage
 
-> Some usage instructions
 if initial run:
 
   - run 'npm install'
