@@ -5,6 +5,10 @@ const db = mongoose.connection;
 
 
 const stockSchema = new mongoose.Schema({
+  _id: {
+    type: Number,
+    required: [true, '_id field is required']
+  },
   stockTicker: {
     type: String,
     required: [true, 'stockTicker field is required'],
@@ -37,14 +41,6 @@ const getStock = (ticker, cb) => {
   });
 };
 
-const getStockById = (id, cb) => {
-  Stock.findOne(
-    { _id: id },
-  ).then((stock) => {
-    cb(null, stock);
-  });
-};
-
 const loadAllStocks = (cb) => {
   Stock.find({}).then((stocks) => {
     cb(null, stocks);
@@ -54,4 +50,3 @@ const loadAllStocks = (cb) => {
 module.exports = Stock;
 module.exports.getStock = getStock;
 module.exports.loadAllStocks = loadAllStocks;
-module.exports.getStockById = getStockById;
