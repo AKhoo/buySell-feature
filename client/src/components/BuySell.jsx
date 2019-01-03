@@ -1143,14 +1143,14 @@ class BuySell extends React.Component {
   }
 
   changeStock() {
-    axios.get('/stocks').then(res => {
-      const stocks = res.data;
-      const rand = stocks[Math.floor(Math.random() * stocks.length)];
-      console.log('STOCCCCCCKK', rand)
+    const id = window.location.pathname.slice(1, window.location.pathname.length-1)
+    axios.get('/:id').then(res => {
+      console.log('STOCCCCCCCK', res.data)
+
       this.setState({
-        stockName: rand.stockName,
-        stockTicker: rand.stockTicker,
-        currentPrice: rand.currentPrice,
+        stockName: res.data.stockName,
+        stockTicker: res.data.stockTicker,
+        currentPrice: res.data.currentPrice,
       })
     })
   }
@@ -1196,7 +1196,6 @@ class BuySell extends React.Component {
   }
 
   buySellClick(e) {
-    console.log('CLICK!!!!', e.target.id, 'BUY', this.state.isSelectedBuy, 'SELL', this.state.isSelectedSell)
     if (e.target.id === 'sell') {
       this.setState({
         orderDescription: 'Estimated Credit',
@@ -1224,7 +1223,6 @@ class BuySell extends React.Component {
   }
 
   buyStock(e) {
-
     const orderType = this.state.isSelectedBuy ? 'Market Buy' : 'Market Sell'
     console.log('ORDER TYPE', orderType);
     const transaction = {

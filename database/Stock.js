@@ -37,6 +37,14 @@ const getStock = (ticker, cb) => {
   });
 };
 
+const getStockById = (id, cb) => {
+  Stock.findOne(
+    { _id: id },
+  ).then((stock) => {
+    cb(null, stock);
+  });
+};
+
 const loadAllStocks = (cb) => {
   Stock.find({}).then((stocks) => {
     cb(null, stocks);
@@ -46,3 +54,4 @@ const loadAllStocks = (cb) => {
 module.exports = Stock;
 module.exports.getStock = getStock;
 module.exports.loadAllStocks = loadAllStocks;
+module.exports.getStockById = getStockById;

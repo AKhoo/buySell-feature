@@ -21,6 +21,16 @@ app.get('/stocks/:stockTicker', (req, res) => {
   });
 });
 
+app.get('/:id', (req, res) => {
+  stocks.getStockById(req.params.id, (err, data) => {
+    if (err) {
+      res.json({ message: "what's a stock?" });
+    } else {
+      res.json(data);
+    }
+  });
+});
+
 app.get('/stocks', (req, res) => {
   stocks.loadAllStocks((err, data) => {
     if (err) {
