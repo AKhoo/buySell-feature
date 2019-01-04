@@ -5,10 +5,11 @@ const db = require('../database/index.js');
 const transactions = require('../database/transaction.js');
 const stocks = require('../database/stock.js');
 const port = 3333;
+const path = require('path');
 
 app.use('/', express.static('./public'));
 app.use(/\/\d+\//, express.static('./public'));
-
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json());
 
 app.get('/stocks/:stockTicker', (req, res) => {
