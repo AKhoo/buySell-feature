@@ -1,8 +1,8 @@
 import React from 'react';
-import BuySell from './BuySell.jsx';
-import History from './History.jsx';
 import axios from 'axios';
 import styled from 'styled-components';
+import BuySell from './BuySell.jsx';
+import History from './History.jsx';
 
 const Body = styled.div`
 background-attachment: scroll;
@@ -205,7 +205,7 @@ class App extends React.Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/transactions').then(res => {
       this.setState({
         transactions: res.data

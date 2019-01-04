@@ -1130,11 +1130,8 @@ class BuySell extends React.Component {
       this.changeStock = this.changeStock.bind(this);
   }
 
-  componentWillMount() {
-    this.changeStock();
-  }
-
   componentDidMount() {
+    this.changeStock();
     this.setState({
       sharesBalance: `${this.state.userBalance} Buying Power Available`,
       isSelectedBuy: true,
@@ -1149,7 +1146,7 @@ class BuySell extends React.Component {
       var urlStock = {}
       for (var i=0; i < stocks.length; i++) {
         if (stocks[i]._id === id) {
-            urlStock = stocks[i];
+          urlStock = stocks[i];
         }
       }
       console.log('STOCCCCCCKK', urlStock, id)
