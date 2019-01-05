@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import BuySell from './BuySell.jsx';
 import History from './History.jsx';
+import apiRoot from './apiRoot.js'
 
 const Body = styled.div`
 background-attachment: scroll;
@@ -205,13 +206,8 @@ class App extends React.Component {
     }
   }
 
-<<<<<<< HEAD
   componentWillMount() {
-    axios.get('http://localhost:3333/transactions').then(res => {
-=======
-  componentDidMount() {
-    axios.get('/transactions').then(res => {
->>>>>>> 31ca80fee82bd9bd98079a1f4d1a3f27a22868e6
+    axios.get(`${apiRoot}transactions`).then(res => {
       this.setState({
         transactions: res.data
       })
