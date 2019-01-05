@@ -21,8 +21,8 @@ if initial run:
   - start mongoDB server
   - run 'mongoimport --db robinsHood --collection stocks --file nasdaq-data.csv --type csv --headerline' to seed the database with the included .csv file
 
-server start script is 'npm run server-dev'
-react start script is 'npm run react-dev'
+server start script is 'start'
+react/webpack start script is 'build'
 test start is 'npm run test'
 
 home url path is 'localhost:3333'
